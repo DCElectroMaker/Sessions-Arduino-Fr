@@ -26,7 +26,44 @@ Pour réaliser notre premier programme, vous allez cliquer sur Fichier/Exemple/0
 ![clicblink](https://user-images.githubusercontent.com/29465741/27224076-9702bb36-5293-11e7-89e1-de6c9e86ec05.png)
 
 Le texte suivant va apparaitre dans l'ide. Ce texte est notre programme ou code. Il va permettre de faire clignoter une led située sur la carte arduino.  Pour le moment nous n'allons pas nous attarder su le programme.
+```arduino
+/*
+  Blink
+  Turns on an LED on for one second, then off for one second, repeatedly.
 
+  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO 
+  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN is set to
+  the correct LED pin independent of which board is used.
+  If you want to know what pin the on-board LED is connected to on your Arduino model, check
+  the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
+  
+  This example code is in the public domain.
+
+  modified 8 May 2014
+  by Scott Fitzgerald
+  
+  modified 2 Sep 2016
+  by Arturo Guadalupi
+  
+  modified 8 Sep 2016
+  by Colby Newman
+*/
+
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+```
 **Code Blink**
 
 Maintenant appuiyez sur le bouton **V** situé en haut à gauche de l'ide. Ce bouton permet de **compiler** le code, c'est à dire de vérifier si il ny a pas d'erreur. A la fin de la compilation, vous devrez recevoir un message en bas de l'ide indiquant qu'il n'y a pas d'erreur; ce qui est le cas vu qu'il s'agit d'un code exemple. 
