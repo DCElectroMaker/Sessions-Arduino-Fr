@@ -77,6 +77,7 @@ commentaire
 
 Je vous conseil de prendre l'habitude de commenter votre code mais pour notre analyse nous allons supprimer tout les commentaire du programme **BLINK** pour garder l'essentiel du code.
 
+```arduino
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -87,10 +88,11 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);    
   delay(1000);                       
 }
+```
 
 Une fois tout les commentaire suprimé, nous allons réorganiser le code pour faciliter sa lecture. Pour celà, nous allons alligner les accolades. Les accolades permettent de délimiter des blocs de codes. Ce que nous venons de faire ne change en rien le fonctionnement du code. Je vous conseil de prendre cette habitude pour organiser vos codes.
 
-'''Javascript  
+```arduino
 void setup() 
 {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -103,7 +105,7 @@ void loop()
   digitalWrite(LED_BUILTIN, LOW);    
   delay(1000);                       
 }
-'''
+```
 
 Interessons nous au deuxième bloc de code. On peut remarquer 3 élément :
 
