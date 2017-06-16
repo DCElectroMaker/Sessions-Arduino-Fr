@@ -64,9 +64,12 @@ Interessont nous d'abord aux parties de code en gris. Ces lignes sont des commen
 Il existe 2 façons de créer un commentaire:  
 
 1. Mettre une ligne en commentaire:  
+```arduino
 //Ligne à mettre en commantaire
+```
 
 2. Mettre un paragraphe en commentaire:  
+```arduino
 /*  
 paragraphe  
 à  
@@ -74,7 +77,7 @@ mettre
 en  
 commentaire  
 */
-
+```
 Je vous conseil de prendre l'habitude de commenter votre code mais pour notre analyse nous allons supprimer tout les commentaire du programme **BLINK** pour garder l'essentiel du code.
 
 ```arduino
