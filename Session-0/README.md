@@ -55,10 +55,58 @@ Félicitation vous venez programmer votre carte arduino! Vous devez maintenant v
 
 ![arduino_builtin_led](https://user-images.githubusercontent.com/29465741/27239941-4227401a-52d3-11e7-86c9-880908a9b226.jpg)
 
+## Logique de programmation:
 
+Maintenant que nous avons réussis à faire clignoter notre led, interessons nous au code.  
+Vous remarquerez que les lignes de codes ont des couleurs différentes. Ces couleurs sont générées automatiquement par l'ide affin d'avoir une lecture du code plus aisée.  
+Interessont nous d'abord aux parties de code en gris. Ces lignes sont des commentaires, celà signifie qu'elles n'ont aucune influence sur le code. Leur seul but ai d'aider les programmeurs à comprendre un code et à le structurer pour faciliter sa lisibilité.  
 
+Il existe 2 façons de créer un commentaire:  
 
+1. Mettre une ligne en commentaire:  
+//Ligne à mettre en commantaire
 
+2. Mettre un paragraphe en commentaire:  
+/*  
+paragraphe  
+à  
+mettre  
+en  
+commentaire  
+*/
+
+Je vous conseil de prendre l'habitude de commenter votre code mais pour notre analyse nous allons supprimer tout les commentaire du programme **BLINK** pour garder l'essentiel du code.
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(1000);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(1000);                       
+}
+
+Une fois tout les commentaire suprimé, nous allons réorganiser le code pour faciliter sa lecture. Pour celà, nous allons alligner les accolades. Les accolades permettent de délimiter des blocs de codes. Ce que nous venons de faire ne change en rien le fonctionnement du code. Je vous conseil de prendre cette habitude pour organiser vos codes.
+
+void setup() 
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() 
+{
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(1000);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(1000);                       
+}
+
+Interessons nous au deuxième bloc de code. On peut remarquer 3 élément :
+
+1. **void loop()** c'est ce que nous appelrons pour le moment le *nom* du bloc.  
+2. 
 
 
 Bibliographie et iconographie:  
