@@ -90,7 +90,7 @@ void loop() {
 
 Une fois tout les commentaire suprimé, nous allons réorganiser le code pour faciliter sa lecture. Pour celà, nous allons alligner les accolades. Les accolades permettent de délimiter des blocs de codes. Ce que nous venons de faire ne change en rien le fonctionnement du code. Je vous conseil de prendre cette habitude pour organiser vos codes.
 
-void setup() 
+'void setup() 
 {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -101,7 +101,7 @@ void loop()
   delay(1000);                       
   digitalWrite(LED_BUILTIN, LOW);    
   delay(1000);                       
-}
+}'
 
 Interessons nous au deuxième bloc de code. On peut remarquer 3 élément :
 
