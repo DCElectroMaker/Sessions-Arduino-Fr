@@ -6,7 +6,13 @@ Bravo, vous êtes l'heureu propriétaire d'une carte arduino. Félicitation!!
 
 Et là c'est le moment où vous vous dites "Ok... Et maintenant j'en fais quoi de ce bout de plastique bleu?"  
 
-Pas de panique! Une fois votre carte arduino en main, la première étape est de télécharger le logiciel arduino sur le lien suivant:  
+Pas de panique! je vous conseil de visionner cette vidéo dans un premier temps.  
+Attention !!! la vidéo date de 2015, le logiciel et les codes exemples présentés peuvent ne pas correspondre à la version actuelle.  
+Pour cette première session le *prototypr shield* n'est pas nécessaire.
+
+https://www.youtube.com/watch?v=A84Mtf9-Thc
+
+Une fois votre carte arduino en main, la première étape est de télécharger le logiciel arduino sur le lien suivant:  
 https://www.arduino.cc/en/Main/Software  
 Le Logiciel en entièrement gratuit, sur la page suivante cliquez sur **JUST DOWNLOAD** et le téléchargement débutera.
 
