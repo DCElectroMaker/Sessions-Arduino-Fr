@@ -113,7 +113,8 @@ void loop()
 Interessons nous au deuxième bloc de code. On peut remarquer 3 élément :
 
 1. **void loop()** c'est ce que nous appelrons pour le moment le *nom* du bloc.  
-2. 
+2. **{}** les deux accolades délimitent le bloc.
+3. Les **instrcutions** ce sont les lignes de codes qui composent le bloc. Notez que les lignes d'instructions se terminent d'un **;** contrairement au nom du block.
 
 
 Bibliographie et iconographie:  
