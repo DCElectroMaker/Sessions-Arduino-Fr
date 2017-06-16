@@ -117,7 +117,7 @@ commentaire
 ```
 Je vous conseil de prendre l'habitude de commenter votre code mais pour notre analyse nous allons supprimer tout les commentaire du programme **BLINK** pour garder l'essentiel du code.
 
-```
+```arduino
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -132,7 +132,7 @@ void loop() {
 
 Une fois tout les commentaire suprimé, nous allons réorganiser le code pour faciliter sa lecture. Pour celà, nous allons alligner les accolades. Les accolades permettent de délimiter des blocs de codes. Ce que nous venons de faire ne change en rien le fonctionnement du code. Je vous conseil de prendre cette habitude pour organiser vos codes.
 
-```
+```arduino
 void setup() 
 {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -152,6 +152,13 @@ Interessons nous au deuxième bloc de code. On peut remarquer 3 élément :
 1. **void loop()** c'est ce que nous appelrons pour le moment le *nom* du bloc.  
 2. **{}** les deux accolades délimitent le bloc.
 3. Les **instrcutions** ce sont les lignes de codes qui composent le bloc. Notez que les lignes d'instructions se terminent d'un **;** contrairement au nom du block.
+
+Maintenant que nous savons ce qu'est un bloc regardons comment fonctionne un programme. Pour celà, nous allons analyser le logigramme de notre code
+
+![logigramme](https://user-images.githubusercontent.com/29465741/27247071-fecc3082-52f5-11e7-872c-f4f6f35c6e9d.png)
+
+Un programme est executé de manière séquentielle, ce qui veut dire qu'il execute son code ligne par ligne. Lorsque un programme est chargé sur la carte arduino, le programme débute par la première ligne de code.  
+Pour notre programme, on commence par le bloc **Setup**. Ce bloc est utilisé pour faire des initalisation, ici la ligne *pinMode(LED_BUILTIN, OUTPUT);* signifie qu'on utilise la pin LED_BUILTIN en *sortie* (nous verrons ce qu'est une sortie à la prochaine session). Une fois cette instruction effectuée, le programme entre dans le bloc **Loop** et effectue l'instruction *digitalWrite(LED_BUILTIN, HIGH);* qui allume la led ensuite *delay(1000);* permet d'attendre 1000 ms soit 1 seconde. Ensuite l'instruction *digitalWrite(LED_BUILTIN, LOW);* qui éteind notre led puis on attend encore 1 seconde avec l'instruction suivante.  Et maintenant il n'y a plus d'instrction alors que faire? Et bien le bloc **Loop** est un bloc particulier qui se répete à l'infini tant que la carte est allimentée. Le programme va donc allumer la led, attendre 1 seconde, éteindre la led, attendre encore 1 seconde et recommence. Si on appuis sur le bouton **reset** de la carte ou si on déconnecte le cable USB et qu'on rebranche la carte, le programme recommence au début, fait son initialisation en entre dans la boucle.
 
 
 Bibliographie et iconographie:  
