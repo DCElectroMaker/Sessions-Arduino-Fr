@@ -94,6 +94,8 @@ Félicitation vous venez programmer votre carte arduino! Vous devez maintenant v
 
 ## Logique de programmation:
 
+### Commen fonctionne un code?
+
 Maintenant que nous avons réussis à faire clignoter notre led, interessons nous au code.  
 Vous remarquerez que les lignes de codes ont des couleurs différentes. Ces couleurs sont générées automatiquement par l'ide affin d'avoir une lecture du code plus aisée.  
 Interessont nous d'abord aux parties de code en gris. Ces lignes sont des commentaires, celà signifie qu'elles n'ont aucune influence sur le code. Leur seul but ai d'aider les programmeurs à comprendre un code et à le structurer pour faciliter sa lisibilité.  
@@ -130,7 +132,7 @@ void loop() {
 }
 ```
 
-Une fois tout les commentaire suprimé, nous allons réorganiser le code pour faciliter sa lecture. Pour celà, nous allons alligner les accolades. Les accolades permettent de délimiter des blocs de codes. Ce que nous venons de faire ne change en rien le fonctionnement du code. Je vous conseil de prendre cette habitude pour organiser vos codes.
+Une fois tout les commentaire suprimé, nous allons réorganiser le code pour faciliter sa lecture. Pour celà, nous allons alligner les accolades. Les accolades permettent de délimiter des blocs de codes. Ce que nous venons de faire ne change en rien le fonctionnement du code, pour le vérifier vous pouver enregistrer votre code en le renommant *monPremierProgramme* et le téléverser sur la carte. Je vous conseil de prendre cette habitude pour organiser vos codes.
 
 ```arduino
 void setup() 
@@ -159,6 +161,51 @@ Maintenant que nous savons ce qu'est un bloc regardons comment fonctionne un pro
 
 Un programme est executé de manière séquentielle, ce qui veut dire qu'il execute son code ligne par ligne. Lorsque un programme est chargé sur la carte arduino, le programme débute par la première ligne de code.  
 Pour notre programme, on commence par le bloc **Setup**. Ce bloc est utilisé pour faire des initalisation, ici la ligne *pinMode(LED_BUILTIN, OUTPUT);* signifie qu'on utilise la pin LED_BUILTIN en *sortie* (nous verrons ce qu'est une sortie à la prochaine session). Une fois cette instruction effectuée, le programme entre dans le bloc **Loop** et effectue l'instruction *digitalWrite(LED_BUILTIN, HIGH);* qui allume la led ensuite *delay(1000);* permet d'attendre 1000 ms soit 1 seconde. Ensuite l'instruction *digitalWrite(LED_BUILTIN, LOW);* qui éteind notre led puis on attend encore 1 seconde avec l'instruction suivante.  Et maintenant il n'y a plus d'instrction alors que faire? Et bien le bloc **Loop** est un bloc particulier qui se répete à l'infini tant que la carte est allimentée. Le programme va donc allumer la led, attendre 1 seconde, éteindre la led, attendre encore 1 seconde et recommence. Si on appuis sur le bouton **reset** de la carte ou si on déconnecte le cable USB et qu'on rebranche la carte, le programme recommence au début, fait son initialisation en entre dans la boucle.
+
+#### A vous de jouer !
+
+**1. Changer le temps:**
+
+Maintenant que vous savez comment fonctionne notre code, vous allez pouvoir le modifier. Après avoir commenté votre code vous allez modifier les délais et ainsi changer le temps de clignotement. Une fois les modifications effectuées, téléversez le code et admirez le résultat.
+
+```arduino
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+  delay(100);                       //attendre 0,1 s                       
+  digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+  delay(1500);                      //attendre 1,5 s
+}
+```
+
+**2. Deux clignotements différents:**
+
+Pour ce deuxième exercice, je vous propose de faire clignoter led rapidement puis lentement. Réalisez votre code avant de regarder ma solution.
+
+```arduino
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+  delay(100);                       //attendre 0,1 s                       
+  digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+  delay(1500);                      //attendre 1,5 s
+  
+  digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+  delay(1000);                       //attendre 0,1 s                       
+  digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+  delay(1500);                      //attendre 1,5 s
+}
+```
 
 
 Bibliographie et iconographie:  
