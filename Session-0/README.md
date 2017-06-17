@@ -245,6 +245,8 @@ void setup()                        //initialisation
   pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
 }
 ```
+
+/!\ Les variables qu'on utilise pour le moment ne peuvent pas êtres des nombres à virgule, celà fera l'objet d'une prochaine session /!\
  
  
 Un comparateur logique est une comparaison entre 2 variables ou une variable et une valeur fixe.
@@ -358,7 +360,7 @@ void loop()                         //boucle infinie
 }
 ```
  
-**2.1.2. Deux tests à la suite :**
+**2.1.3. Deux tests à la suite :**
  
 Nous pouvons réaliser deux tests à la suite si besoin.
  
@@ -379,7 +381,56 @@ else        //autrement
   //Faire autre chose
 }
 ```
-Enfin, il existe un troisième type de test qui permet de faire des tests en cascade. Ce test est le test **if else if else** qui peut se traduire par 'Si... sinon si... autrement...'.  
+#### À vous de jouer !
+ 
+Faites un programme qui se comporte de la manière suivante:  
+* Si a est plus grand que 5, la led clignote une fois rapidement puis une fois lentement.
+* Si a est compris entre 3 et 5 inclus, la led clignote lentement.
+* Si a est plus petit ou égale à 3, la led clignote **très** lentement.  
+**Cliquez ici pour ma solution**
+
+![ififelseexo](https://user-images.githubusercontent.com/29465741/27256464-ca9bc65e-53b5-11e7-8852-e7225da47823.png)
+
+```arduino
+int a=2;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  if(a>5)                           //est ce que 'a' est plus grand que 5?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(100);                       //attendre 0,1 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(100);                       //attendre 0,1 s 
+  }
+
+  if(a>3)                           //est ce que 'a' est plus grand que 3?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(500);                       //attendre 0,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s 
+  }
+  else                              //autrement
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(1500);                       //attendre 1,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(1500);                       //attendre 1,5 s
+    
+  }
+}
+```
+
+**2.1.4. Le test *IF/ELSE IF/ELSE* :**
+
+Enfin, le troisième type de test permet de faire des tests en cascade. Contrairement à deux tests *if* à la suite, le premiers test doit être invalide pour passer au test suivant. Un test en cascade peut se lire 'Si... sinon si... autrement...'.  
+Dans l'exemple, si *a* est plus grand que 5 on *fait quelque chose* sinon si *a* est plus grand que 3, le programme *fait quelque chose d'autre*. Si aucun des test n'est validé, le programme *fait autre chose*.
 ![ifelseifelse](https://user-images.githubusercontent.com/29465741/27249305-6156fc8e-5312-11e7-872f-87921a708eb5.png)
 ```arduino
 if(a>5)          //est-ce que ‘a’ est plus grand que 5?
@@ -395,10 +446,84 @@ else             //autrement
   //Faire autre chose
 }
 ```
+
+#### À vous de jouer !
  
-** 2. La boucle 'tant que':**
+Réalisez un programme qui se comporte de la façon suivante:  
+* Si a est plus petit que 3, la led clignote rapidement.
+* Si a est compris entre 3 inclus et 5, la led clignote lentement.
+* Si a est plus grand ou égale à 5, la led clignote **très** lentement.  
+**Cliquez ici pour ma solution**
  
-Une boucle **tant que** est constituée d'un test, la condition de ce test est vraie alors le programme rentre dans une boucle qui se répète tant que la condition est vérifiée.
+ ```arduino
+ int a=4;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  if(a<3)                           //est ce que 'a' est plus petit que 3?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(100);                       //attendre 0,1 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(100);                       //attendre 0,1 s 
+  }
+
+  else if(a<5)                           //est ce que 'a' est plus petit que 5?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(500);                       //attendre 0,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s 
+  }
+  else                              //autrement
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(1500);                       //attendre 1,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(1500);                       //attendre 1,5 s
+    
+  }
+}
+ ```
+
+**2.2. Les Boucles:** 
+
+Pour aborder les boucles, nous allons apprendre une nouvelle notion qui nous permettra de modifier la valeur d'une variable:
+
+**L'incrémentaton** est le fait d'augmenter la valeur d'une variable.  
+Pour l'exemple suivant, la variable *a* a déjà été déclarée. 
+
+```arduino
+a=0;
+a=a+1;  //a=0+1 donc 'a' vaut 1 après cette instruction
+a=a+2;  //a=1+2 donc 'a' vaut 3 après cette instruction
+a=a+2;  //a=3+2 donc 'a' vaut 5 après cette instruction
+```
+En programmation, il existe un raccourcis d'écriture pour l'incrémentation. Écrire *a+=2* reviens à écrire *a=a+2*.  
+Il existe néamoins un deuxième raccourcis valable uniquement pour des incrémentations de 1: *a++* reviesn à écrire *a=a+1*.
+
+L'inverse d'une incrémentation  est une décrémentation est s'utilise de la manière suivante: 
+
+```arduino
+a=10;
+a=a-3;  //a=10-3 donc 'a' vaut 7 après cette instruction
+a-=2;   //a=7-2  donc 'a' vaut 5 après cette instruction
+a--;    //a=5-1  donc 'a' vaut 4 après cette instruction
+```
+
+Ces 2 instructions vous nous permettre de réaliser des compteurs.
+
+**2.2.1. La boucle *while* :** 
+ 
+La boucle **while** est la boucle la plus basique. Elle est constituée d'un test qui permet de rentrer dans la boucle si les conditions du test sont validée. Une fois dans la boucle, le code contenu dans la boucle est répété tant que le test est vrais.  
+Dans l'exemple, on affecte la valeur zéro à la variable *a* avant de vérifier si *a* est plus petit que 5, ce qui est le cas!  
+Après le test, le programme *fait quelque chose* avant d'incrémanter *a* et de refaire le test.  
+De cette manière on passera 5 fois dans la boucle (0, 1, 2, 3, 4 sont plus petit que 5). Lors du 5e passage la valeur de *a* passera à 5 après l'incrémentation, le test ne sera alors plus valide et le programme quittera alors la boucle.
 ![while](https://user-images.githubusercontent.com/29465741/27249491-25728684-5317-11e7-93c3-3a698eeba0d4.png)
 ```arduino
 a=0;                //affecter la valeur 0 à la variable 'a'
@@ -409,12 +534,6 @@ while(a<5)          //est-ce que 'a' est plus petit que 5?
 } 
 ```
  
-Vous pouvez remarquer une nouvelle instruction *a=a+1* qui permet d'augmenter la valeur de *a* de 1. Cela s'appelle une incrémentation.  
-L'inverse est appelé une décrémentation et est notée *a=a-1*.  
-L'incrémentation et la décrémentation permettent de réaliser des compteurs. Dans notre exemple, on initialise *a* à zéro avant de rentrer dans la boucle. Une fois le test effectué, on *fait quelque chose* et on incrémente ensuite la valeur de *a* qui vaudra alors 1 avant de repasser le test.  
-De cette manière on passera 5 fois dans la boucle (0, 1, 2, 3, 4 sont plus petit que 5). Lors du 5e passage la valeur de *a* passera à 5 après l'incrémentation, le test ne sera alors plus valide et le programme quittera alors la boucle.
- 
-NB: En programmation, il existe un raccourci d'écriture pour l'incrémentation et la décrémentation qui sont a++ et a--.
  
 ** 3. La boucle 'jusqu'à ce que':**
  
