@@ -214,7 +214,8 @@ void loop()                         //boucle infinie
 
 Les tests et les boucles sont les bases fondamentale de la programmation, c'est garce à eux que les programmeurs peuvent créer des algorythmes complexes.
 
-Avant d'aborder ces notions, nous allons aborder la notion de variable.
+Avant d'aborder ces notions, nous allons aborder deux notion qui sont les variable et les comparateurs logiques.
+
 Une variable est une zone mémoire à laquelle on donne un nom et qui comporte une valeur. Cette valeur pourra ensuite être modifiée ou utilisée.  
 Pour utiliser une variable il faut la **déclarer** et l'initaliser. La déclaration permet d'indiquer au programme qu'une variable existe dans le code. 
 
@@ -229,6 +230,16 @@ void setup()                        //initialisation
   pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
 }
 ```
+
+
+Un comparateur logique est une comparaison entre 2 variable ou une variable et une valeur fixe.
+* x == y (x est égal à y)  
+* x != y (x est différent de y)  
+* x < y (x est inférieur à y)  
+* x > y (x est supérieur à y)  
+* x <= y (x est inférieur ou égal à y)  
+* x >= y (x est supérieur ou égal à y)  
+!!ne pas confondre **=** qui est une affectation et **==** qui est une comparaison!!
 
 ** 1. Les tests:
 
@@ -258,7 +269,81 @@ else
   //Faire autre chose
 }
 ```
+Nous pouvons réaliser deux tests à la suite si besoin.  
+![ififelse](https://user-images.githubusercontent.com/29465741/27249226-b8e3aee0-5310-11e7-9e4e-e402347e4a0d.png)
+```arduino
+if(a>5)     //est ce que a est plus grand que 5?
+{
+  //Faire quelque chose
+}
+if(a>3)     //est ce que a est plus grand que 3?
+{
+  //Faire quelque chose d'autre
+}
+else        //autrement
+{
+  //Faire autre chose
+}
+```
+Enfin, il existe un troisième type de test qui permet de faire des tests en cascade. Ce test est le test **if else if else** qui peut se traduire par 'Si... sinon si... autrement...'.  
+![ifelseifelse](https://user-images.githubusercontent.com/29465741/27249305-6156fc8e-5312-11e7-872f-87921a708eb5.png)
+```arduino
+if(a>5)          //est ce que a est plus grand que 5?
+{
+  //Faire quelque chose
+}
+else if(a>3)     //si a n'est pas plus grand que 5 est ce que a est plus grand que 3?
+{
+  //Faire quelque chose d'autre
+}
+else             //autrement
+{
+  //Faire autre chose
+}
+```
+
+** 2. La boucle 'tant que':**
+
+Une boucle **tant que** est constitué d'un test, la condition de ce test est vrais alors le programme rentre dans une boucle qui se répete tant que la condition est vérifiée.
+![while](https://user-images.githubusercontent.com/29465741/27249491-25728684-5317-11e7-93c3-3a698eeba0d4.png)
+```arduino
+a=0;                //affecter la valeur 0 à la variable 'a'
+while(a<5)          //est ce que 'a' est plus petit que 5?
+{
+  //Faire quelque chose
+  a=a+1;            //augmenter la valeur de 'a' de 1
+} 
+```
+
+Vous pouvez remarquer une nouvelle instruction *a=a+1* qui permet d'augmenter la valeur de *a* de 1. Celà s'appel une incrémentation  
+L'inverse est appelé une décrémentation et est noté *a=a-1*.  
+L'incrémentation et la décrémentation permet de réaliser des compteur. Dans notre exemple, on initialise *a* à zéro avant de rentrer dans la boucle. Une fois le test effectué, on *fait quelque chose* et on incrémente ensuite la valeur de *a* qui vaudra alors 1 avant de repasser le test.  
+De cette manière on passera 5 fois dans la boucle (0, 1, 2, 3, 4 sont plus petit que 5). Lors du 5é passage la valeur de *a* passera à 5 après l'incrémentation, le test ne sera alors plus valide et le programme quittera alors la boucle.
+
+NB: En programmation, il existe un racourcis d'écriture pour l'incrémentation et la décrémentation qui sont a++ et a--.
+
+** 3. La boucle 'jusqu'à ce que':**
+
+La boucle **jusqu'à ce que** est un dérivé de la boucle **tant que** qui initialise automatiquement la variable à incrémenter lorsqu'on rentre dans la boucle et qui l'incrémente à chaque fin de cycle.
+
+![for](https://user-images.githubusercontent.com/29465741/27249694-a9411a62-531b-11e7-943d-a6db7a912de5.png)
+```arduino
+for(a=0; a<5;a ++)          //est ce que 'a' est plus petit que 5?
+{
+  //Faire quelque chose
+} 
+```
+
+Vous remarquerez que la condition du test est différentes des conditions rencontrée jusqu'à présent. Cette notation est propre aux boucles **jusqu'à ce que**.  
+La condition est composée de 3 éléments séparés par un **;**  
+* **a=0** initialise la valeur de *a* à zéro lorsqu'on entre dans la boucle.  
+* **a<5** fixe la condition pour rester dans la boucle
+* **a++** fixe le pas d'incrémentation à la fin de chaque cycle, si nous mettions a=a+2 alors la valeur de *a* serait incrémenté de 2 à la fin de chaque cycle.
+
+D'où vient l'appellation **jusqu'à ce que**? Ce type de boucle peut être lut de la manière suivante:  
+'En initialisant mon compteur à zéro, j'incrémente le compteur de 1 à la fin de chaque cycle jusqu'à ce que ma condition ne soit plus respectée'.
 
 Bibliographie et iconographie:  
 https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA  
 http://learn.acrobotic.com/tutorials/post/arduino-activity-01-blink-led  
+http://www.mysti2d.net/polynesie/SIN/08/ServoLent/files/documents/Revision/Branchements.pdf
