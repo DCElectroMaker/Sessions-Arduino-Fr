@@ -101,11 +101,12 @@ L'ide va recompiler le code avant de le téléverser. Une fois le chargement eff
 Félicitation vous venez programmer votre carte arduino! Vous devez maintenant voir une led clignoté.
 
 ![arduino_builtin_led](https://user-images.githubusercontent.com/29465741/27239941-4227401a-52d3-11e7-86c9-880908a9b226.jpg)
+
 ---
 # Logique de programmation:
-----
+---
 
-## Commen fonctionne un code?
+## 1. Commen fonctionne un code?
 
 Maintenant que nous avons réussis à faire clignoter notre led, interessons nous au code.  
 Vous remarquerez que les lignes de codes ont des couleurs différentes. Ces couleurs sont générées automatiquement par l'ide afin d'avoir une lecture du code plus aisée.  
@@ -113,12 +114,12 @@ Interessont nous d'abord aux parties de code en gris. Ces lignes sont des commen
 
 Il existe 2 façons de créer un commentaire:  
 
-1. Une ligne en commentaire:  
+* Une ligne en commentaire:  
 ```arduino
 //Ligne à mettre en commantaire
 ```
 
-2. Un paragraphe en commentaire:  
+* Un paragraphe en commentaire:  
 ```arduino
 /*  
 paragraphe  
@@ -179,7 +180,7 @@ Pour notre programme, on commence par le bloc **Setup**. Ce bloc est utilisé po
 
 #### A vous de jouer !
 
-**1. Changer le temps:**
+* **Changer le temps:**
 
 Maintenant que vous savez comment fonctionne notre code, vous allez pouvoir le modifier. Après avoir commenté votre code vous allez modifier les délais et ainsi changer le temps de clignotement. Une fois les modifications effectuées, téléversez le code et admirez le résultat.
 
@@ -198,7 +199,7 @@ void loop()                         //boucle infinie
 }
 ```
 
-**2. Deux clignotements différents:**
+* **Deux clignotements différents:**
 
 Pour ce deuxième exercice, je vous propose de faire clignoter led rapidement puis lentement. Réalisez votre code avant de regarder ma solution.
 
@@ -222,7 +223,8 @@ void loop()                         //boucle infinie
 }
 ```
 
-### Tests et boucles:
+## 2. Tests et boucles:
+---
 
 Les tests et les boucles sont les bases fondamentale de la programmation, c'est garce à eux que les programmeurs peuvent créer des algorythmes complexes.
 
@@ -253,7 +255,7 @@ Un comparateur logique est une comparaison entre 2 variable ou une variable et u
 * x >= y (x est supérieur ou égal à y)  
 !!ne pas confondre **=** qui est une affectation et **==** qui est une comparaison!!
 
-** 1. Les tests:
+**2.1. Les tests:**
 
 Un test peut être considéré comme une question dont la réponse peut uniquement être oui ou non: 
 Si je vous dis *êtes vous une femme?* vous me réponderez par soit *oui, je suis une femme* ou *non, je suis un homme*.
