@@ -1,7 +1,16 @@
 # Session #0
 
-## Au commencement...
+* Pré-requis: Aucun
 
+* Matériel:  
+-Une carte Arduino Uno  
+![arduino](https://user-images.githubusercontent.com/29465741/27254447-62f8ec7a-5388-11e7-8e5b-8612e45e7a85.png)  
+-Un cable USB type AB  
+![usbab](https://user-images.githubusercontent.com/29465741/27254453-8fda0314-5388-11e7-8c57-2a60cd037466.png)
+
+---
+# Au commencement...
+---
 Bravo, vous êtes l'heureux propriétaire d'une carte arduino. Félicitation!!
 
 Et là c'est le moment où vous vous dites "Ok... Et maintenant j'en fais quoi de mon bout de plastique bleu?"  
@@ -90,9 +99,9 @@ L'ide va recompiler le code avant de le téléverser. Une fois le chargement eff
 Félicitation vous venez programmer votre carte arduino! Vous devez maintenant voir une led clignoté.
 
 ![arduino_builtin_led](https://user-images.githubusercontent.com/29465741/27239941-4227401a-52d3-11e7-86c9-880908a9b226.jpg)
-
+>---
 ## Logique de programmation:
-
+>---
 ### Commen fonctionne un code?
 
 Maintenant que nous avons réussis à faire clignoter notre led, interessons nous au code.  
