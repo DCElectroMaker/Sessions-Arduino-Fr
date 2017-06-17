@@ -224,7 +224,6 @@ void loop()                         //boucle infinie
 ```
 
 ## 2. Tests et boucles:
----
 
 Les tests et les boucles sont les bases fondamentale de la programmation, c'est garce à eux que les programmeurs peuvent créer des algorythmes complexes.
 
@@ -233,7 +232,7 @@ Avant d'aborder ces notions, nous allons aborder deux notion qui sont les variab
 Une variable est une zone mémoire à laquelle on donne un nom et qui comporte une valeur. Cette valeur pourra ensuite être modifiée ou utilisée.  
 Pour utiliser une variable il faut la **déclarer** et l'initaliser. La déclaration permet d'indiquer au programme qu'une variable existe dans le code. 
 
-La déclaration et l'initialisation d'une variable s'effectue avent le setup de la manière suivante:
+La déclaration et l'initialisation d'une variable s'effectue avant le setup de la manière suivante:
 
 ```arduino
 
@@ -255,13 +254,16 @@ Un comparateur logique est une comparaison entre 2 variable ou une variable et u
 * x >= y (x est supérieur ou égal à y)  
 !!ne pas confondre **=** qui est une affectation et **==** qui est une comparaison!!
 
-**2.1. Les tests:**
+**2.1. Les tests:** 
+---
 
 Un test peut être considéré comme une question dont la réponse peut uniquement être oui ou non: 
 Si je vous dis *êtes vous une femme?* vous me réponderez par soit *oui, je suis une femme* ou *non, je suis un homme*.
 
-En programmation, un test est contitué d'une **condition** et peut se lire 'Si la condtion est vérifiée alor le test est vrais'.
-Ce type de test est un test **if**
+**2.1.1. Le test *IF***
+
+En programmation, un test est contitué d'une **condition** et peut se lire 'Si la condtion est vérifiée alor le test est vrais'.  
+L'exemple suivant montre un code qui fait quelque chose si la variable *a* est plus petite que 5.
 
 ![if](https://user-images.githubusercontent.com/29465741/27248948-49af3846-530b-11e7-931f-65b3e3cef486.png)
 ```arduino
@@ -271,7 +273,43 @@ if(a<5)     //est ce que a est plus petit que 5?
 }
 ```
 
-Le deuxième type de test est **if else** et permet de faire une autre action si la condition du test n'est pas respectée.  
+
+#### A vous de jouer !
+
+Pour cet exrcice, je vous propose de déclarer une variable *a* dont vous déciderez de sa valeur d'initialisation.  
+Le but du programme est de faire clignoter la led si *a* est plus petit que 5. 
+Pour celà, je vous propose le logigramme à utilisé et je vous laisse faire.
+**Cliquez ici pour ma solution**
+
+NB: attention aux **;** et aux **{}** !!!
+
+
+![ifexo](https://user-images.githubusercontent.com/29465741/27255613-c6d7fd08-53a1-11e7-9e61-8ae2ecd18e8e.png)
+
+```arduino
+int a=3;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  if(a<5)                           //est ce que 'a' est plus petit que 5?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(100);                       //attendre 0,1 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(100);                       //attendre 0,1 s 
+  }
+}
+```
+
+**2.1.1. Le test *IF/ELSE***
+
+Le deuxième type de test permet de faire une autre action si la condition du test n'est pas respectée.  
+Pour cet exemple, si *a* est plus grans que 5 alors on fait *quelque chose*, autrement on *fait autre chose*  
 ![ifelse](https://user-images.githubusercontent.com/29465741/27249084-6de1405e-530d-11e7-95bd-b7aa3bfae0f5.png)
 ```arduino
 if(a>5)     //est ce que a est plus grand que 5?
@@ -283,6 +321,41 @@ else
   //Faire autre chose
 }
 ```
+
+#### A vous de jouer !
+
+L'exrcice, notre programme devra faire un clignotement rapide si la variable *a* est plus petit que 5, autrement la led clignotera lentement. Comme pour l'exercice précédent, je vous propose un logigramme et c'est à vous de créer le code.
+**Cliquez ici pour ma solution**
+
+![ifelseexo](https://user-images.githubusercontent.com/29465741/27255682-39370ac2-53a4-11e7-9a8a-98cf8932deab.png)
+
+```arduino
+int a=3;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  if(a<5)                           //est ce que 'a' est plus petit que 5?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(100);                       //attendre 0,1 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(100);                       //attendre 0,1 s 
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(500);                       //attendre 0,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s
+  }
+}
+```
+
 Nous pouvons réaliser deux tests à la suite si besoin.  
 ![ififelse](https://user-images.githubusercontent.com/29465741/27249226-b8e3aee0-5310-11e7-9e4e-e402347e4a0d.png)
 ```arduino
