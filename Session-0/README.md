@@ -1,4 +1,4 @@
-# Session #0
+# Session #0: Premiers pas et logique de programmation.
 
 * Pré-requis: Aucun
 
@@ -28,7 +28,9 @@ Une fois le logiciel installé et lancé, le fenetre suivante s'ouvrira. Cette f
 
 ![ide](https://user-images.githubusercontent.com/29465741/27223035-167e8f5c-528f-11e7-9b70-f77dd8f65dbe.png)
 
-## Premier programme:
+---
+# Premier programme:
+---
 
 Pour réaliser notre premier programme, cliquez sur Fichier/Exemple/01.Basics/Blink  
 ![clicblink](https://user-images.githubusercontent.com/29465741/27224076-9702bb36-5293-11e7-89e1-de6c9e86ec05.png)
@@ -99,10 +101,11 @@ L'ide va recompiler le code avant de le téléverser. Une fois le chargement eff
 Félicitation vous venez programmer votre carte arduino! Vous devez maintenant voir une led clignoté.
 
 ![arduino_builtin_led](https://user-images.githubusercontent.com/29465741/27239941-4227401a-52d3-11e7-86c9-880908a9b226.jpg)
->---
-## Logique de programmation:
->---
-### Commen fonctionne un code?
+---
+# Logique de programmation:
+----
+
+## Commen fonctionne un code?
 
 Maintenant que nous avons réussis à faire clignoter notre led, interessons nous au code.  
 Vous remarquerez que les lignes de codes ont des couleurs différentes. Ces couleurs sont générées automatiquement par l'ide afin d'avoir une lecture du code plus aisée.  
