@@ -223,7 +223,7 @@ La déclaration et l'initialisation d'une variable s'effectue avent le setup de 
 
 ```arduino
 
-int a=0;                            //déclaration d'une variable que s'appel 'a' et à laquel on a affecté la valeur 0
+int a=0;                            //déclaration d'une variable que s'appel 'a' à laquel on a affecté la valeur 0
 
 void setup()                        //initialisation
 {
@@ -337,11 +337,42 @@ for(a=0; a<5;a ++)          //est ce que 'a' est plus petit que 5?
 Vous remarquerez que la condition du test est différentes des conditions rencontrée jusqu'à présent. Cette notation est propre aux boucles **jusqu'à ce que**.  
 La condition est composée de 3 éléments séparés par un **;**  
 * **a=0** initialise la valeur de *a* à zéro lorsqu'on entre dans la boucle.  
-* **a<5** fixe la condition pour rester dans la boucle
+* **a<5** fixe la condition pour rester dans la boucle.
 * **a++** fixe le pas d'incrémentation à la fin de chaque cycle, si nous mettions a=a+2 alors la valeur de *a* serait incrémenté de 2 à la fin de chaque cycle.
 
 D'où vient l'appellation **jusqu'à ce que**? Ce type de boucle peut être lut de la manière suivante:  
 'En initialisant mon compteur à zéro, j'incrémente le compteur de 1 à la fin de chaque cycle jusqu'à ce que ma condition ne soit plus respectée'.
+
+** 4. La boucle 'do while':**
+
+Cette boucle est une variante de la boucle **tant que**. La diférence est la place du test. Le test est réalisé à la fin de la boucle. De cette manière, les instruction de la boucle sont effectuée au moins une fois même si le test n'est pas valide.  
+Ce type de boucle est très peu utilisé.  
+![dowhile](https://user-images.githubusercontent.com/29465741/27249883-a38c705e-531f-11e7-8c03-4ab73e535be6.png)
+```arduino
+a=0;
+do
+{
+  //Faire quelque chose
+} while (a>5);
+```
+
+!! il y a un **;** après le while pour cette boucle !!
+
+### A vous de jouer:
+
+Félicitation, vous avez maintenant les outils nécéssaires pour réaliser un programme.  
+Maitrisez les boucles et tests grâce à quelques exercices afin de terminer cette session.
+
+1. Faites 5 clignotements rapides suivis de 3 clignotements lents à l'aide d'une boucle while.
+
+2. Faites 5 clignotements rapides suivis de 3 clignotements lents à l'aide d'une boucle for.
+
+3. Arretez le clignotement apèrs 5 clignotement rapide à l'aide d'un test if.
+
+3. Arretez le clignotement apèrs 5 clignotement rapide suivi de 2 clignotement lent à l'aide d'un test if/else.
+
+3. Arretez le clignotement apèrs 5 clignotement rapide suivi de 2 clignotement lent et 3 clignotement rapide   
+à l'aide d'un test if/else if/ else.
 
 Bibliographie et iconographie:  
 https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA  
