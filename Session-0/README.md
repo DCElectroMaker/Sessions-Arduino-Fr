@@ -204,13 +204,13 @@ void loop()                         //boucle infinie
   delay(1500);                      //attendre 1,5 s
   
   digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
-  delay(1000);                       //attendre 0,1 s                       
+  delay(1000);                       //attendre 1 s                       
   digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
   delay(1500);                      //attendre 1,5 s
 }
 ```
 
-###Test et boucles:
+### Tests et boucles:
 
 Les tests et les boucles sont les bases fondamentale de la programmation, c'est garce à eux que les programmeurs peuvent créer des algorythmes complexes.
 
@@ -230,7 +230,7 @@ void setup()                        //initialisation
 }
 ```
 
-**1. Les tests:
+** 1. Les tests:
 
 Un test peut être considéré comme une question dont la réponse peut uniquement être oui ou non: 
 Si je vous dis *êtes vous une femme?* vous me réponderez par soit *oui, je suis une femme* ou *non, je suis un homme*.
