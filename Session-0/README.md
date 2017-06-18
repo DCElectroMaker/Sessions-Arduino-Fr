@@ -1,5 +1,7 @@
 # Session #0: 
 # Premiers pas et logique de programmation.
+
+* Durée: 1h
  
 * Pré-requis: Aucun
  
