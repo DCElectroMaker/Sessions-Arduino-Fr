@@ -577,7 +577,7 @@ void loop()                         //boucle infinie
  
 **2.2.2. La boucle *FOR* :** 
  
-La boucle **FOR** est un dérivé de la boucle **WHILE** qui initialise automatiquement la variable à incrémenter lorsqu'on rentre dans la boucle et qui l'incrémente à chaque fin de cycle. Ce type de boucle est utilisée lorsqu'il faut répéter un nombre de fois précis une série d'instruction. 
+La boucle **FOR** est un dérivé de la boucle **WHILE** qui initialise automatiquement la variable à incrémenter lorsqu'on rentre dans la boucle et qui l'incrémente à chaque fin de cycle. Ce type de boucle est utilisée lorsqu'il faut répéter un nombre de fois précis une série d'instruction.  
 ![for](https://user-images.githubusercontent.com/29465741/27249694-a9411a62-531b-11e7-943d-a6db7a912de5.png)
 ```arduino
 for(a=0; a<5;a ++)          //est-ce que 'a' est plus petit que 5?
@@ -606,7 +606,7 @@ void setup()                        //initialisation
 
 void loop()                         //boucle infinie
 {
-  for(a=0;a<5;a++)   //initialisation de 'a';est-ce que 'a' est plus petit que 5?;incrémenter'a'de 1à la fin de chaque cycle
+  for(a=0;a<5;a++)   //remettre 'a' à zéro;est-ce que 'a' est plus petit que 5?;incrémenter'a'de 1à la fin de chaque cycle
   {                                   
     digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
     delay(100);                       //attendre 0,1 s                       
@@ -614,7 +614,7 @@ void loop()                         //boucle infinie
     delay(500);                       //attendre 0,5 s  
   } 
   
-  while(a<3)        //initialisation de 'a';est-ce que 'a' est plus petit que 3?;incrémenter'a'de 1 à la fin de chaque cycle
+  for(a=0;a<3;a++)  //remettre 'a' à zéro;est-ce que 'a' est plus petit que 3?;incrémenter'a'de 1 à la fin de chaque cycle
   {
     digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
     delay(500);                       //attendre 0,5 s                       
@@ -624,10 +624,10 @@ void loop()                         //boucle infinie
 }
 ```
  
-**2.2.2. La boucle *FOR* :** 
+**2.2.2. La boucle *DO WHILE* :** 
  
-Cette boucle est une variante de la boucle **tant que**. La différence est la place du test. Le test est réalisé à la fin de la boucle. De cette manière, les instructions de la boucle sont effectuées au moins une fois même si le test n'est pas valide.  
-Ce type de boucle est très peu utilisé.  
+Cette boucle est une variante de la boucle **WHILE**. La différence est la place du test qui est réalisé à la fin de la boucle.  
+De cette manière, les instructions de la boucle sont effectuées au moins une fois même si le test n'est pas valide.  
 ![dowhile](https://user-images.githubusercontent.com/29465741/27249883-a38c705e-531f-11e7-8c03-4ab73e535be6.png)
 ```arduino
 a=0;
@@ -638,23 +638,98 @@ do
 ```
  
 /!\ il y a un **;** après le while pour cette boucle /!\
- 
-### À vous de jouer:
- 
-Félicitations, vous avez maintenant les outils nécessaires pour réaliser un programme.  
-Maîtrisez les boucles et tests grâce à quelques exercices afin de terminer cette session.
- 
-1. Faites 5 clignotements rapides suivis de 3 clignotements lents à l'aide d'une boucle while.
- 
-2. Faites 5 clignotements rapides suivis de 3 clignotements lents à l'aide d'une boucle for.
- 
-3. Arrêtez le clignotement après 5 clignotements rapides à l'aide d'un test if.
- 
-3. Arrêtez le clignotement après 5 clignotements rapides suivis de 2 clignotements lents à l'aide d'un test if/else.
- 
-3. Arrêtez le clignotement après 5 clignotements rapides suivis de 2 clignotements lents et 3 clignotements rapides.   
-à l'aide d'un test if/else if/ else.
- 
+
+### À vous de ... :
+
+Ce type de boucle etant très peu utilisé. Je vous propose de passer à la suite sans faire d'exercice.  
+
+---
+# Une instruction bien utile:
+---
+
+Avant de conclure cette session, nous allons voir une dernière instruction dont vous ne pourrez plus vous passer !
+
+Cette instruction permet d'afficher du texte sur votre ordinnateur. Pour pouvoir l'utiliser, vous devez écrire *Serial.begin(9600);* comme dernière instruction dans le bloc **Setup** pour démarrer la communication avec votre PC.
+```
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+  Serial.begin(9600);               //démarrer la communication
+}
+```
+
+Vous êtes impatient de faire parler votre carte Arduino n'est ce pas? Alors je ne vais pas créer plus de suspense!
+```arduino
+Serial.print("Bonjour, je suis votre carte Arduino ;)");
+```
+Cette instruction envois le texte sité entre guillemets. Ici, elle permet à votre carte Arduino d'envoyer la phrase *Bonjour, je suis votre carte arduino ;)*.
+
+Vous pouvez également afficher la valeur d'une variable. Pour celà il vous suffit de mettre le nom de la variable sans utiliser de guillemets.
+```arduino
+Serial.print(a);
+```
+
+/!\ Cette instruction ne génère pas d'espace, ce sera donc à vous de les inclure. De plus, cette instruction ne permet pas de faire de retour à la ligne. Pour réaliser un retour à la ligne après avoir affiché un texte il faut utiliser une autre instruction fort semblable:  
+```arduino
+Serial.println("Le prochain texte sera à la ligne");
+```
+
+Pour mieux comprendre l'utilisation de cette instruction nous allons réaliser un petit programme qui va afficher le message bonjours puis la valeur de la variable *a*.  
+![print](https://user-images.githubusercontent.com/29465741/27257648-84134602-53de-11e7-8545-18ff1e5196d1.png)
+```arduino
+ int a=5;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  Serial.begin(9600);               //debut de la communication
+}
+
+void loop()                         //boucle infinie
+{
+ Serial.print("Bonjour, la variable a vaut ");  //afficher le texte sans retour à la ligne
+ Serial.println(a);                             //afficher la valeur de 'a' puis revenir à la ligne
+}
+```
+
+Une fois le programme téléversé, cliquez sur la loupe située en à droite de l'ide.
+![btnterminal](https://user-images.githubusercontent.com/29465741/27257698-0565f668-53e0-11e7-8e4f-5c02e2432f6c.png)
+
+La fenêtre qui souvre devant vous est le **moniteur série**. C'est là que sont affichée les donnée provennant de la carte arduino.  
+![terminal](https://user-images.githubusercontent.com/29465741/27257718-f68c272e-53e0-11e7-989c-aaa2b84d2e7f.png)
+
+/!\ si vous n'obtenez pas le même affichage, assurez vous que **9600 baud** est bien selectionné (en bas à droite du moniteur).
+
+---
+# Conclusion :
+---
+
+Félicitations, vous avez maintenant les outils nécessaires pour réaliser vos premiers programme.  
+Vous êtes à présent capable de:
+* programmer votre carte.
+* modifer un code.
+* controler le clignotement d'une led.
+* afficher des messages sur votre ordinateur.
+
+### Conseils et astuces :
+
+* Commentez vos codes. Celà vous permettra de vous relire et de partager vos codes.
+* Les **;** sont la première cause d'erreur n'oubliez pas d'en mettre un à la fin de chaque instruction. Il n'en faut pas après le *nom* d'un bloc.
+* Les **{}** sont la deuxième cause d'erreur, n'oubliez pas de délimiter vos blocs. Si vous cliquez sur une accolade, l'ide met en surbrillance l'accolade qui lui est liée.
+* Lorsque vous êtes sur l'ide, ctrl+Maj+m permet d'ouvrir le moniteur série.
+* Utilisez Serial.println() pour vérifiez si vous passer dans une boucle ou dans un test. Celà vous permettra de trouver vos erreurs.
+* Lorsque vous faites du copier-collé, n'oubliez pas de relire votre code et de faire vos modification si il y en a.
+
+---
+# Exercice complémentaire :
+---
+
+Afficher le message SOS en code morse sur la led en affichant chaque lettre sur le moniteur série avant de faire le clignotement de cette led. l'espacement entre les lettres et les mots doit respecter le code morse international.
+
+![sos](https://user-images.githubusercontent.com/29465741/27257814-babbf71a-53e5-11e7-95e6-9122ad2a6eee.png)
+![morse](https://user-images.githubusercontent.com/29465741/27257808-3e710fec-53e5-11e7-8131-8607c02d4b0d.png)
+
+
+--- 
 Bibliographie et iconographie:  
 https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA  
 http://learn.acrobotic.com/tutorials/post/arduino-activity-01-blink-led  
