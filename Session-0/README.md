@@ -575,7 +575,7 @@ void loop()                         //boucle infinie
 }
 ```
  
-**2.2.2. La boucle *FOR* :** 
+**2.2.3. La boucle *FOR* :** 
  
 La boucle **FOR** est un dérivé de la boucle **WHILE** qui initialise automatiquement la variable à incrémenter lorsqu'on rentre dans la boucle et qui l'incrémente à chaque fin de cycle. Ce type de boucle est utilisée lorsqu'il faut répéter un nombre de fois précis une série d'instruction.  
 ![for](https://user-images.githubusercontent.com/29465741/27249694-a9411a62-531b-11e7-943d-a6db7a912de5.png)
@@ -691,7 +691,7 @@ void loop()                         //boucle infinie
 }
 ```
 
-Une fois le programme téléversé, cliquez sur la loupe située en à droite de l'ide.
+Une fois le programme téléversé, cliquez sur la loupe située en à droite de l'ide.  
 ![btnterminal](https://user-images.githubusercontent.com/29465741/27257698-0565f668-53e0-11e7-8e4f-5c02e2432f6c.png)
 
 La fenêtre qui souvre devant vous est le **moniteur série**. C'est là que sont affichée les donnée provennant de la carte arduino.  
@@ -730,9 +730,10 @@ Afficher le message SOS en code morse sur la led en affichant chaque lettre sur 
 
 
 --- 
-Bibliographie et iconographie:  
+Sources :  
 https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA  
 http://learn.acrobotic.com/tutorials/post/arduino-activity-01-blink-led  
 http://www.mysti2d.net/polynesie/SIN/08/ServoLent/files/documents/Revision/Branchements.pdf
+https://fr.wikipedia.org/wiki/Morse_(alphabet)
  
  
