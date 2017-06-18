@@ -520,7 +520,7 @@ Ces 2 instructions vous nous permettre de réaliser des compteurs.
 
 **2.2.1. La boucle *while* :** 
  
-La boucle **while** est la boucle la plus basique. Elle est constituée d'un test qui permet de rentrer dans la boucle si les conditions du test sont validée. Une fois dans la boucle, le code contenu dans la boucle est répété tant que le test est vrais.  
+La boucle **while** est la boucle la plus basique. Elle est constituée d'un test qui permet de rentrer dans la boucle si les conditions du test sont validée. Une fois dans la boucle, le code qu'elle contenu est répété tant que le test est vrais.  
 Dans l'exemple, on affecte la valeur zéro à la variable *a* avant de vérifier si *a* est plus petit que 5, ce qui est le cas!  
 Après le test, le programme *fait quelque chose* avant d'incrémanter *a* et de refaire le test.  
 De cette manière on passera 5 fois dans la boucle (0, 1, 2, 3, 4 sont plus petit que 5). Lors du 5e passage la valeur de *a* passera à 5 après l'incrémentation, le test ne sera alors plus valide et le programme quittera alors la boucle.
@@ -533,6 +533,11 @@ while(a<5)          //est-ce que 'a' est plus petit que 5?
   a=a+1;            //augmenter la valeur de 'a' de 1
 } 
 ```
+ 
+#### À vous de jouer !
+
+Le programme a réaliser doit faire 5 clignotements rapides suivis de 3 clignotements lent.
+**Cliquez ici pour ma solution**
  
  
 ** 3. La boucle 'jusqu'à ce que':**
