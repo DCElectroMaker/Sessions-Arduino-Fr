@@ -1,4 +1,5 @@
-# Session #0: Premiers pas et logique de programmation.
+# Session #0: 
+# Premiers pas et logique de programmation.
  
 * Pré-requis: Aucun
  
@@ -518,7 +519,7 @@ a--;    //a=5-1  donc 'a' vaut 4 après cette instruction
 
 Ces 2 instructions vous nous permettre de réaliser des compteurs.
 
-**2.2.1. La boucle *while* :** 
+**2.2.1. La boucle *WHILE* :** 
  
 La boucle **while** est la boucle la plus basique. Elle est constituée d'un test qui permet de rentrer dans la boucle si les conditions du test sont validée. Une fois dans la boucle, le code qu'elle contenu est répété tant que le test est vrais.  
 Dans l'exemple, on affecte la valeur zéro à la variable *a* avant de vérifier si *a* est plus petit que 5, ce qui est le cas!  
@@ -539,11 +540,44 @@ while(a<5)          //est-ce que 'a' est plus petit que 5?
 Le programme a réaliser doit faire 5 clignotements rapides suivis de 3 clignotements lent.
 **Cliquez ici pour ma solution**
  
+ ![whileexo](https://user-images.githubusercontent.com/29465741/27257351-a506932e-53d3-11e7-81b8-f5fc3e5d6938.png)
+```arduino
+ int a=0;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  a=0;                                 //mise à zéro de 'a'
+  
+  while(a<5)                           //est ce que 'a' est plus petit que 5?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(100);                       //attendre 0,1 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s 
+    a++;                              //incrémentation de 'a'
+  }
+  
+  a=0;                                 //mise à zéro de 'a'
+
+  while(a<3)                           //est ce que 'a' est plus petit que 3?
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(500);                       //attendre 0,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s 
+    a++;                              //incrémentation de 'a'
+  }
+}
+```
  
-** 3. La boucle 'jusqu'à ce que':**
+**2.2.2. La boucle *FOR* :** 
  
-La boucle **jusqu'à ce que** est un dérivé de la boucle **tant que** qui initialise automatiquement la variable à incrémenter lorsqu'on rentre dans la boucle et qui l'incrémente à chaque fin de cycle.
- 
+La boucle **FOR** est un dérivé de la boucle **WHILE** qui initialise automatiquement la variable à incrémenter lorsqu'on rentre dans la boucle et qui l'incrémente à chaque fin de cycle. Ce type de boucle est utilisée lorsqu'il faut répéter un nombre de fois précis une série d'instruction. 
 ![for](https://user-images.githubusercontent.com/29465741/27249694-a9411a62-531b-11e7-943d-a6db7a912de5.png)
 ```arduino
 for(a=0; a<5;a ++)          //est-ce que 'a' est plus petit que 5?
@@ -552,16 +586,45 @@ for(a=0; a<5;a ++)          //est-ce que 'a' est plus petit que 5?
 } 
 ```
  
-Vous remarquerez que la condition du test est différente des conditions rencontrées jusqu'à présent. Cette notation est propre aux boucles **jusqu'à ce que**.  
+Vous remarquerez que la condition du test est différente des conditions rencontrées jusqu'à présent. Cette notation est propre aux boucles **FOR**.  
 La condition est composée de 3 éléments séparés par un **;**  
 * **a=0** initialise la valeur de *a* à zéro lorsqu'on entre dans la boucle.  
 * **a<5** fixe la condition pour rester dans la boucle.
 * **a++** fixe le pas d'incrémentation à la fin de chaque cycle, si nous mettions a=a+2 alors la valeur de *a* serait incrémentée de 2 à la fin de chaque cycle.
  
-D'où vient l'appellation **jusqu'à ce que**? Ce type de boucle peut être lue de la manière suivante:  
-'En initialisant mon compteur à zéro, j'incrémente le compteur de 1 à la fin de chaque cycle jusqu'à ce que ma condition ne soit plus respectée'.
+#### À vous de jouer !
+
+Pour cet exercice, je vous propose de reprendre l'exercice de la boucle **WHILE** mais en utilisant cette fois une boucle **FOR**.  
+**Cliquez ici pour ma solution**
+```arduino
+ int a=0;  //déclaration de 'a' et initialisation de sa valeur
+
+void setup()                        //initialisation
+{
+  pinMode(LED_BUILTIN, OUTPUT);     //configuration de la led en sortie
+}
+
+void loop()                         //boucle infinie
+{
+  for(a=0;a<5;a++)   //initialisation de 'a';est-ce que 'a' est plus petit que 5?;incrémenter'a'de 1à la fin de chaque cycle
+  {                                   
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(100);                       //attendre 0,1 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s  
+  } 
+  
+  while(a<3)        //initialisation de 'a';est-ce que 'a' est plus petit que 3?;incrémenter'a'de 1 à la fin de chaque cycle
+  {
+    digitalWrite(LED_BUILTIN, HIGH);  //allumer la led   
+    delay(500);                       //attendre 0,5 s                       
+    digitalWrite(LED_BUILTIN, LOW);   //éteindre la led
+    delay(500);                       //attendre 0,5 s  
+  }
+}
+```
  
-** 4. La boucle 'do while':**
+**2.2.2. La boucle *FOR* :** 
  
 Cette boucle est une variante de la boucle **tant que**. La différence est la place du test. Le test est réalisé à la fin de la boucle. De cette manière, les instructions de la boucle sont effectuées au moins une fois même si le test n'est pas valide.  
 Ce type de boucle est très peu utilisé.  
