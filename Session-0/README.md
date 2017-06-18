@@ -721,6 +721,8 @@ Vous êtes à présent capable de:
 * Utilisez Serial.println() pour vérifiez si vous passer dans une boucle ou dans un test. Celà vous permettra de trouver vos erreurs.
 * Lorsque vous faites du copier-collé, n'oubliez pas de relire votre code et de faire vos modification si il y en a.
 
+/!\ L'ide prend en comptre les majuscules:  **S**erial.begin(9600); est différent de **s**erial.begin(9600);
+
 ---
 # Exercice complémentaire :
 ---
