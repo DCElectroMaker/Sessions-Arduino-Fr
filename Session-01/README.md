@@ -164,9 +164,7 @@ Contrairement aux montages séries, ce type de montage consiste à mettre plusie
 
 Imaginez une rivière qui se sépare en deux avant de se jeter du haut d'une falaise. Les deux chute d'eau créée on donc de même hauteur.  
 ![cascade](https://user-images.githubusercontent.com/29465741/27310148-7d5e74a0-5558-11e7-82af-b8c704abd4dd.png)  
-
-De la même manière, deux résistances en parallèle auront donc la même tension à leurs bornes
-
+De la même manière, deux résistances en parallèle auront donc la même tension à leurs bornes.  
 ![rpara](https://user-images.githubusercontent.com/29465741/27310540-3548b862-555b-11e7-9f3f-62652f9ee37f.png)
 
 #### À vous de jouer !
