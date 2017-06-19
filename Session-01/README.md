@@ -9,13 +9,14 @@
   - Qu'y a-t-il sur la carte?
   - À quoi correspondent les pins?
 - Notions de base en électronique :  
-  - Courant électrique, tension électrique? qu'est ce que c'est?  
-  - Montages série  
-  - Montages parallèle  
+  - Courant électrique, tension électrique? qu'est ce que c'est?
+  - La loi d'ohm
+  - Les montages série  
+  - Les montages parallèle  
   - La *planche à pain*  
   - Mise en pratique   
-    - Allumer une led sans Arduino.
-    - Controler plusieurs leds avec Arduino.
+    - Allumer une led sans carte Arduino.
+    - Faire clignoter plusieurs leds avec une carte Arduino.
 
 ### Durée: **?**
  
@@ -130,11 +131,43 @@ Avant d'aller plus loin, il est primordial d'aborder quelques notions de base en
 ## 1. Courant électrique, tension électrique? qu'est ce que c'est?
 
 Pour répondre à cette question, je ne vais pas réinventer la roue. C'est pourquoi je vous invite à visionner cette vidéo qui vous explique parfaitement ces deux notions.  
-https://www.youtube.com/watch?v=4iXh5YD2yOg&t=2s
+https://www.youtube.com/watch?v=4iXh5YD2yOg&t=2s  
+Notez que l'unitée de la tension est le volt [V] et celui du courant est l'ampère [A].
 
 /!\ contrairement aux électriciens, les électroniciens ont horreur d'utiliser les générateur de courant. En effet, vous constaterez assez vite qu'en électronique on travail principalement avec des tension. C'est pourquoi je vais vous demander de vous dire que les générateurs de courant *"n'existent pas"*.
 
-## 2. Montages série :
+## 2. La loi d'ohm :
+
+Base fondamentale de l'électronique, cette loi de la physique doit être ancrée dans votre mémoire.  Elle permet de connaitre le courant traversant une résistance en connaisant la tension aux borne de celle-ci.
+
+La loi d'ohm nous dit que la tension au borne d'une résistance est égale au produit du courant qui la traverse et de la valeur de la résistance.  
+**U=R.I**
+
+Imaginons une résistance de 100Ω alimenté par une pile 9V.  
+Nous savons que **U=R.I** donc **9=100.I**  
+Pour obtenir le courant qui traverse la résistance, il suffit de transformer la formule pour isoler le courtant.  
+**U=R.I -> I=U/R**  
+Si on reprend notre exemple on aura donc **I=9/100=0,09A** soit **90mA*
+
+## 3. Les montages séries :
+
+Faire un montage en série reviens à monter les composants l'un à la suite de l'autre comme dans la vidéo précédente.
+
+Lorsque plusieurs résistances sont mise en série:
+- Le courant traversant chaque résistance est identique.
+- La somme des tensions aux bornes de chaque résistance est égale à la tension d'alimentation.
+- Plusieurs résistances mises en série peuvent êtres remplacé par une seul résistance équivalante dont la valeur est égale à la somme des résistance. **Rtot=R1+R2+R3**
+
+## 4. Les montages parallèles :
+
+Contrairement aux montages séries, ce type de montage consiste à mettre plusieurs résistances côte à côte.
+
+Imaginez une rivière qui se sépare en deux avant de se jeter du haut d'une falaise. Les deux chute d'eau créée on donc de même hauteur.  
+![cascade](https://user-images.githubusercontent.com/29465741/27310148-7d5e74a0-5558-11e7-82af-b8c704abd4dd.png)  
+
+De la même manière, deux résistances en parallèle auront donc la même tension à leurs bornes
+
+![rpara](https://user-images.githubusercontent.com/29465741/27310540-3548b862-555b-11e7-9f3f-62652f9ee37f.png)
 
 #### À vous de jouer !
  
