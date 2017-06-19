@@ -10,12 +10,12 @@
   - À quoi correspondent les pins?
 - Notions de base en électronique :  
   - Courant électrique, tension électrique? qu'est ce que c'est?  
-  - Montage série  
-  - Montage parallèle  
+  - Montages série  
+  - Montages parallèle  
   - La *planche à pain*  
-- Mise en pratique :  
-  - Allumer une led sans Arduino.
-  - Controler plusieurs leds avec Arduino.
+  - Mise en pratique   
+    - Allumer une led sans Arduino.
+    - Controler plusieurs leds avec Arduino.
 
 ### Durée: **?**
  
@@ -76,7 +76,7 @@ Je l'avoue je viens juste de vous mentir... Et là c'est le moment où vous dite
 Rassurez vous ce n'est pas le cas. Je m'explique! Toutes les pins ne permettent pas d'interragir avec le monde exterieur.  
 Il existe 2 types de pins:  
 
-**Les pins d'alimentation :**  
+* **Les pins d'alimentation :**  
 ![boardpower](https://user-images.githubusercontent.com/29465741/27264816-d7ec7c72-5487-11e7-8d4a-341b37b6b732.png)
 
 Les pins *3.3V* et *5V* fournissent respectivement 3,3V et 5V.  
@@ -88,7 +88,7 @@ La pin *Vin* permet d'alimenter la carte sans passer par le port USB ou le conne
 Finalement la pin *GND (ground)* fournis 0V. C'est ce qu'on appel la **masse** de la carte, ce qui peut être comparé à la borne **-** d'une pile.  
 Vous remarquerez qu'il y a plusieurs pins *GND*. Celà ne veut pas dire qu'il y a différentes **masses** mais que ces pins sont connectées entre elles à l'interrieur de la carte. Il est fréquent de retrouver plusieurs fois la même connection sur une carte électronique pour des question de facilité de câblage.
 
-**Les entrées/sorties digitales :**  
+* **Les entrées/sorties digitales :**  
 ![boardpindig](https://user-images.githubusercontent.com/29465741/27265004-99ff2810-548c-11e7-8a6b-3a4c4a5395a0.png)
 
 Ce sont nos fameuses pins qui permettent d'interragir avec le monde exterieur. Elles peuvents êtres configurée soit en entrée soit en sortie.  
@@ -124,6 +124,17 @@ Après avoir analysé la carte en détails nous pouvons en conclure qu'une carte
 ---
 # Notions de base en électronique.
 ---
+
+Avant d'aller plus loin, il est primordial d'aborder quelques notions de base en électronique pour vous permettre de réaliser vos premiers montages.
+
+## 1. Courant électrique, tension électrique? qu'est ce que c'est?
+
+Pour répondre à cette question, je ne vais pas réinventer la roue. C'est pourquoi je vous invite à visionner cette vidéo qui vous explique parfaitement ces deux notions.  
+https://www.youtube.com/watch?v=4iXh5YD2yOg&t=2s
+
+/!\ contrairement aux électriciens, les électroniciens ont horreur d'utiliser les générateur de courant. En effet, vous constaterez assez vite qu'en électronique on travail principalement avec des tension. C'est pourquoi je vais vous demander de vous dire que les générateurs de courant *"n'existent pas"*.
+
+## 2. Montages série :
 
 #### À vous de jouer !
  
