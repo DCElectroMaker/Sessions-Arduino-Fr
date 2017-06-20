@@ -13,7 +13,8 @@
   - La loi d'ohm
   - Les montages série  
   - Les montages parallèle  
-  - La *planche à pain*  
+  - La *planche à pain*
+  - La Led
   - Mise en pratique   
     - Allumer une led sans carte Arduino.
     - Faire clignoter plusieurs leds avec une carte Arduino.
@@ -28,7 +29,7 @@ Notions de base en mathématique (savoir lire une équation).
 ![arduino](https://user-images.githubusercontent.com/29465741/27254447-62f8ec7a-5388-11e7-8e5b-8612e45e7a85.png)  
 -Un cable USB type AB  
 ![usbab](https://user-images.githubusercontent.com/29465741/27254453-8fda0314-5388-11e7-8c57-2a60cd037466.png)  
--Quelques leds  
+-Quelques leds 5mm de diamètre 
 ![led](https://user-images.githubusercontent.com/29465741/27261760-dcb38202-5449-11e7-8d24-9cc7d96db89c.png)  
 -Quelques résistances  
 ![resistances](https://user-images.githubusercontent.com/29465741/27261781-5069832c-544a-11e7-8496-076269d5d1c1.png)  
@@ -140,12 +141,12 @@ Notez que l'unitée de la tension est le volt [V] et celui du courant est l'amp�
 
 ## 2. La loi d'ohm :
 
-Base fondamentale de l'électronique, cette loi de la physique doit être ancrée dans votre mémoire.  Elle permet de connaitre le courant traversant une résistance en connaisant la tension aux borne de celle-ci.
+Base fondamentale de l'électronique, la loi d'ohm est une loi de la physique qui doit être ancrée dans votre mémoire.  Elle permet de connaitre le courant traversant une résistance en connaisant la tension aux borne de celle-ci.
 
-La loi d'ohm nous dit que la tension au borne d'une résistance est égale au produit du courant qui la traverse et de la valeur de la résistance.  
+La loi d'ohm nous dit que la tension aux borne d'une résistance est égale au produit du courant qui la traverse et de la valeur de la résistance.  
 **U=R.I**
 
-Imaginons une résistance de 100Ω alimenté par une pile 9V.  
+Imaginons une résistance de 100 Ω alimenté par une pile 9V.  
 Nous savons que **U=R.I** donc **9=100.I**  
 Pour obtenir le courant qui traverse la résistance, il suffit de transformer la formule pour isoler le courtant.  
 **U=R.I -> I=U/R**  
@@ -194,7 +195,31 @@ La disposition des connections internnes sont faites de façon à pouvoir alimen
 ![breadcon](https://user-images.githubusercontent.com/29465741/27311848-2344dd40-5564-11e7-9302-9a4e0e3e8f9d.png)  
 ![breadic](https://user-images.githubusercontent.com/29465741/27311854-2a4bfd3a-5564-11e7-8f50-c30581f11a7d.png)
  
+ Le saviez vous?
+ Historiquement, les premières plaques de prototypage étaient des planche à pain sur lesquelles on plantais des clous et sur lesquels on enroulait des fils de cuivre pour faire les connections.
  
+ ## La led :
+ 
+ Une led (ou del en français) est une diode électroluminécente.  
+ ![ledschem](https://user-images.githubusercontent.com/29465741/27335790-025ce068-55ce-11e7-99e9-010022bf9b24.png)  
+ Les flèches sur le symbole indiquent qu'il s'agit d'une diode qui émet de la lumière.
+ 
+ Comme toute diode, la led a un sens de branchement. Lorsqu'elle est branchée en *passante*, la broche + (ou anode) est branchée sur le potentiel le plus élevé et la broche - (ou cathode) est branchée sur le potentiel le moins élevé. Dans cette configuration, elle laisse passer librement le courant.  
+ Si elle est branchée en inverse, elle est dite *bloquante* car elle ne laisse passer aucun courant. Le courant qui la traverse sera donc égale à zéro.
+ C'est la présence d'un courant qui la traverse qui crée la lumière dans la led. Il vous faudra donc faire attention à son branchement.  
+ ![ancat](https://user-images.githubusercontent.com/29465741/27336536-243de068-55d0-11e7-8f71-e6310a6e9b9b.png)  
+ NB: les diodes sont souvant utilisée en mode bloquant pour de nombreuses applications que nous n'aborderons pas ici.
+ 
+ /!\ Une led doit toujours être mis en série avec une résistance pour limiter le courant. Un courant trop élevé va claquer votre led /!\
+ 
+ Caractéristiques:
+1. **Couleur:** Les caractéristiques d'une led varient d'une couleur à une autre, ce sera donc la première caractéristique à vérifier.  
+2. **Diamètre:** Pour une même couleurs, la tension de seuil et le courant maximal d'une led varie en fonction de son diamètre.  
+3. **Tension de seuil:** Même si une led est montée en passant, il faut une tension minimale aux borne de la led qui correspond à la tension de seuil autrement la led ne s'allumera pas. Une fois que la tension de seuil est atteinte, la tension aux bornes de la led sera égale à la tension de seuil. La tensiond'alimentation doit être supperieur à la tension de seuil car la réssistance en série va *pomper* une partie de la tension d'alimenttion.
+
+#### À vous de jouer !
+
+* Pour chaque montage, dites si la led va s'allumer et expliquez pourquoi.
  
 **Cliquez ici pour ma solution**
  
@@ -227,5 +252,6 @@ https://fr.dreamstime.com/photo-stock-r%C3%A9sistance-%C3%A9lectronique-image486
 https://en.wikipedia.org/wiki/Breadboard  
 https://zombiebothq.com/challenge-two-signal-box-v2/  
 https://electronics.stackexchange.com/questions/211885/why-are-my-components-unconnected-in-the-middle-of-the-breadboard  
- 
+http://www.pinsdaddy.com/led-symbol_%7CxMV5OGmMxn2yhHrJJ8lYkUdc54ipx5j%7CQ%7CZ7BxppZ4/  
+http://www.pcrc.org.uk/blog/2012/12/16/working_leds_part   
  
