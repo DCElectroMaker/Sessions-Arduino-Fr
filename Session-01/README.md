@@ -162,12 +162,37 @@ Lorsque plusieurs résistances sont mise en série:
 
 Contrairement aux montages séries, ce type de montage consiste à mettre plusieurs résistances côte à côte.
 
-Imaginez une rivière qui se sépare en deux avant de se jeter du haut d'une falaise. Les deux chute d'eau créée on donc de même hauteur.  
+Imaginez un fleuve qui se sépare en deux rivières avant de se jeter du haut d'une falaise. Les deux chute d'eau créée on donc la même hauteur.  
 ![cascade](https://user-images.githubusercontent.com/29465741/27310148-7d5e74a0-5558-11e7-82af-b8c704abd4dd.png)  
 De la même manière, deux résistances en parallèle auront donc la même tension à leurs bornes.  
 ![rpara](https://user-images.githubusercontent.com/29465741/27310540-3548b862-555b-11e7-9f3f-62652f9ee37f.png)
 
+Pour se qui est du débit, il se divise lorsque le fleuve se sépare. Celà veut dire que la somme des débits des rivière est égale au dévit du fleuve. Il en va de même lorsque les rivière se rejoignent pour reformer le fleuve après la chute.  
+En électronique, lorsqu'une branche se sépare où lorsque plusieurs branches se rejoingent, on obtient ce qu'on appel un noeud.  
+Lorsqu'une branche se sépare, la somme des courant sortant du noeud est égale au courant entrant dans le noeud.  
+De même, la somme des courants entrant dans un noeud est égale à la somme du courant sortant du noeud lorsque plusieurs branches se rejoignent.
+
+Finalement, plusieurs résistances en parallèle peuvent être remplacées par une seul résistance équivalente dont la valeur se calcule de la manière suivante:  
+**1/Rtot=1/R1+1/R2+1/R3**     
+Lorsqu'il n'y a que deux résistances en parallèle, la valeur de la résistance équivalente peut s'obtenir d'une autre façon.
+**Rtot=(R1.R2)/(R1+R2)
+
+/!\ 1/Rtot est différent de Rtot
+
 #### À vous de jouer !
+ 
+ En guise d'éxercice, je vous propose de regarder cette vidéo qui aborde les notions de mise en parallèle et de mise en série sous une autre approche et qui vous propose des exercices avec correction.  
+ https://youtu.be/uSPjmneXnpY?t=4m19s
+ 
+ ## 4. La *planche à pain* :
+ 
+ En électronique, on utilise ce qu'on appel un *breadboard* ou *plaque de prototypage*. Cet outils est une plaque sur laquel on peut réaliser des montages sans devoir souder les composant et qui dispose de connections internnes.  
+ ![bread](https://user-images.githubusercontent.com/29465741/27311643-934b8e56-5562-11e7-8421-d89f169b38d3.png)  
+La disposition des connections internnes sont faites de façon à pouvoir alimenter facilement un montage et de monter des composants comme des microcontroleurs.  
+![breadcon](https://user-images.githubusercontent.com/29465741/27311848-2344dd40-5564-11e7-9302-9a4e0e3e8f9d.png)  
+![breadic](https://user-images.githubusercontent.com/29465741/27311854-2a4bfd3a-5564-11e7-8f50-c30581f11a7d.png)
+ 
+ 
  
 **Cliquez ici pour ma solution**
  
@@ -190,12 +215,15 @@ De la même manière, deux résistances en parallèle auront donc la même tensi
 --- 
 Sources :  
 https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA  
+https://www.youtube.com/channel/UCNDybCEVgyROIXEIeWgp7hA  
+https://www.youtube.com/channel/UCKePSV3VZrLFDexdTNh5PTw  
 Iconographie :  
-https://libraries.io/github/Bouni/Arduino-Pinout
+https://libraries.io/github/Bouni/Arduino-Pinout  
 http://boutique.semageek.com/fr/2-arduino-uno-dip-rev3-8058333490090.html  
-http://www.i-am-bored.com/2014/04/captain-obvious-to-the-rescue-pic.html
-https://fr.dreamstime.com/photo-stock-r%C3%A9sistance-%C3%A9lectronique-image48668083
-
-
+http://www.i-am-bored.com/2014/04/captain-obvious-to-the-rescue-pic.html  
+https://fr.dreamstime.com/photo-stock-r%C3%A9sistance-%C3%A9lectronique-image48668083  
+https://en.wikipedia.org/wiki/Breadboard  
+https://zombiebothq.com/challenge-two-signal-box-v2/  
+https://electronics.stackexchange.com/questions/211885/why-are-my-components-unconnected-in-the-middle-of-the-breadboard  
  
  
