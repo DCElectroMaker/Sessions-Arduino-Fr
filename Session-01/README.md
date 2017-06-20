@@ -31,7 +31,9 @@ Notions de base en mathématique (savoir lire une équation).
 -Quelques leds  
 ![led](https://user-images.githubusercontent.com/29465741/27261760-dcb38202-5449-11e7-8d24-9cc7d96db89c.png)  
 -Quelques résistances  
-![resistances](https://user-images.githubusercontent.com/29465741/27261781-5069832c-544a-11e7-8496-076269d5d1c1.png)
+![resistances](https://user-images.githubusercontent.com/29465741/27261781-5069832c-544a-11e7-8496-076269d5d1c1.png)  
+-Une breadboard  
+ ![bread](https://user-images.githubusercontent.com/29465741/27311643-934b8e56-5562-11e7-8421-d89f169b38d3.png)  
 
 
  
