@@ -16,8 +16,8 @@
   - La *planche à pain*
   - La Led
   - Mise en pratique   
-    - Allumer une led sans carte Arduino.
-    - Faire clignoter plusieurs leds avec une carte Arduino.
+    - Allumer une led.
+    - Faire clignoter une led.
 
 ### Durée: **?**
  
@@ -219,10 +219,63 @@ La disposition des connections internnes sont faites de façon à pouvoir alimen
 
 #### À vous de jouer !
 
-* Pour chaque montage, dites si la led va s'allumer et expliquez pourquoi.
- 
+* Pour chaque montage, expliquez pourquoi la led s'allume ou non. La tension de seuil de la led est de 2,1V.
+
+![ledexo1](https://user-images.githubusercontent.com/29465741/27387535-47a1c7f8-5699-11e7-9660-3fb38e50aa4e.png)  
+
+**Solution:**  
+**A)** La led ne s'allume pas car elle est montée en sens bloquant, aucun courant ne la traverse et donc elle n'émet pas de lumière. De plus il n'y a pas de résistance en série.  
+**B)** Tout comme pour le A) la led reste éteinte car elle est montée en sens bloquant.  
+**C)** La led ne s'allume pas car elle n'a pas de résistance en série pour limiter le courant. La led est donc grillée.  
+**D)** La led ne s'allume pas car la tension d'allimentation est inferieur à la tension de seuil de la led.  
+**E)** La led s'allume car elle est dans le bon sens, elle est en série avec un résistance et a une alimentation suffisament grande.
+
+* Pour une led de 2,1V/20mA alimentée par une source de 5V:  
+**A)** Trouvez la tension de la résistance.  
+**B)** Trouvez la valeur de la résistance.
+/!\ le courant est exprimé en mA, il faudra donc le convertir en A pour vos calculs /!\
+
+**Solution:**
+**A)** Les composants sont en série, ce qui veut dire que la somme de leurs tensions est égale à la tension d'alimentation. Connaitssant la tension de la led ainsi que celle de l'alimentation, on peut en déduire que **Ualim=Uled+Ur**.  
+En isolant Ur on obtient **Ur=Ualim-Uled**, donc **Ur=5-2,1=2,9V**.  
+**B)** Le montage étant en série, le courant parcouru par tout les composant est identique. Nous connaisons donc la tension de la résistance et le courant maximal qui doit la parcourir.  
+Il ne reste plus qu'à appliquer la loi d'ohm pour retrouver la valeur de la résistance:  
+**Ur=R.I  ->  R=Ur/I  ->  R=2,9/0,02= 145 Ω**
+
+## Mise en pratique:
+
+Vous l'attendiez avec impatience avec cette session lourde en théorie, la pratique !
+Mais... Une fois n'est pas coutume, je vous propose cette courte vidéo qui vous permettra de lire la valeur de vos résistances:  
+https://www.youtube.com/watch?v=TEAoO9MMG9g
+
+Vous êtes capble de lire une résistance? alors c'est parti!
+
+# 1. Allumer une led :
+
+Nous allons mettre en pratique le dernier exercice sur les leds, pour celà vous aures besion d'une résistance d'au moins 145 Ω, d'une led jaune de 5mm (ou une autre couleurs mais dont les caractéristiques sont 2,1V/20mA), d'une breadboard et d'une carte arduino.  
+
+/!\ La carte arduino nous servira uniquement de source d'alimentation /!\
+
+Réalisez le montage suivant et vous constaterez que la led est allumée une fois la carte arduino alimentée.
+
+ça ne fonctionne pas? Pas de panique!  
+Les problèmes courants avec ce type de montages sont les suivants:  
+- vérifiez si votre montage est bien cablé.
+- vérifiez le sens de votre led.  
+- vérifiez votre résistance, une résistance trop grande ne permet pas de fournir suffisament de courant pour allumer la led.  
+- changez de led, il se peut que la led que vous utilisez est déjà claquée.
+
+ça fonctionne? Félicitation!  
+Vous venez de créer un petit montage qui vous permet de tester vos leds et ainsi vérifier si vos leds ne sont pas claquée.
+
+# 2. Faire clignoter une led :
+
+Avant de réaliser le montage, vous devrez chargez le programme blink sur votre carte (
+Dans un premier temps, nous allons reprendre le montage précédent et brancher l'alimentation de la led sur une pin digitale au lieu de la pin 5V de la carte.
+
 **Cliquez ici pour ma solution**
- 
+
+
 
 ---
 # Conclusion :
@@ -244,6 +297,7 @@ Sources :
 https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA  
 https://www.youtube.com/channel/UCNDybCEVgyROIXEIeWgp7hA  
 https://www.youtube.com/channel/UCKePSV3VZrLFDexdTNh5PTw  
+https://www.youtube.com/channel/UCeUpjZW7WywpFxASPRd6FDw  
 Iconographie :  
 https://libraries.io/github/Bouni/Arduino-Pinout  
 http://boutique.semageek.com/fr/2-arduino-uno-dip-rev3-8058333490090.html  
