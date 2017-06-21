@@ -270,8 +270,21 @@ Vous venez de créer un petit montage qui vous permet de tester vos leds et ains
 
 # 2. Faire clignoter une led :
 
-Avant de réaliser le montage, vous devrez chargez le programme blink sur votre carte (
-Dans un premier temps, nous allons reprendre le montage précédent et brancher l'alimentation de la led sur une pin digitale au lieu de la pin 5V de la carte.
+Avant de réaliser le montage, nous allons d'abord programmer la carte. Pour celà, ouvrez le programme Blink à fin de le modifier.
+![clicblink](https://user-images.githubusercontent.com/29465741/27224076-9702bb36-5293-11e7-89e1-de6c9e86ec05.png)  
+
+
+
+Nous allons ensuite reprendre le montage précédent et brancher l'alimentation de la led sur la pin *13* au lieu de la pin *5V*.  
+Une fois le montage réalisé, branchez votre carte pour l'alimenter.
+
+Votre led qui clignote? Félicitation!  
+Vous venez de franchir la frontière entre l'électronique et la programmation en controllant un montage à partir de votre carte.
+
+NB: Avez vous remarquez que la led de la carte arduino clignote en même temps que celle de votre montage? Pas de panique c'est normal!  
+La led de la carte arduino est montée en parallèle à la pin *13* sur votre carte. 
+
+
 
 **Cliquez ici pour ma solution**
 
