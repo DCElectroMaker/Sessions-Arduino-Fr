@@ -270,7 +270,7 @@ Vous venez de créer un petit montage qui vous permet de tester vos leds et ains
 
 # 2. Faire clignoter une led :
 
-Avant de réaliser le montage, nous allons d'abord programmer la carte. Pour celà, ouvrez le programme Blink à fin de le modifier.
+Avant de réaliser le montage, nous allons d'abord programmer la carte. Pour celà, ouvrez le programme Blink afin de le modifier.  
 ![clicblink](https://user-images.githubusercontent.com/29465741/27224076-9702bb36-5293-11e7-89e1-de6c9e86ec05.png)  
 
 
