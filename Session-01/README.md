@@ -18,11 +18,13 @@
   - Mise en pratique   
     - Allumer une led.
     - Faire clignoter une led.
+    - Faire clignoter deux leds.
 
 ### Durée: **?**
  
 ### Pré-requis:  
-Notions de base en mathématique (savoir lire une équation).
+- avoir quelques notions de base en mathématique (savoir lire une équation).
+- savoir charger un programme sur la carte Arduino.
  
 ### Matériel:  
 -Une carte Arduino Uno  
@@ -258,6 +260,8 @@ Nous allons mettre en pratique le dernier exercice sur les leds, pour celà vous
 
 Réalisez le montage suivant et vous constaterez que la led est allumée une fois la carte arduino alimentée.
 
+**Schéma de câblage à venir**
+
 ça ne fonctionne pas? Pas de panique!  
 Les problèmes courants avec ce type de montages sont les suivants:  
 - vérifiez si votre montage est bien cablé.
@@ -270,19 +274,85 @@ Vous venez de créer un petit montage qui vous permet de tester vos leds et ains
 
 # 2. Faire clignoter une led :
 
-Avant de réaliser le montage, nous allons d'abord programmer la carte. Pour celà, ouvrez le programme Blink afin de le modifier.  
-![clicblink](https://user-images.githubusercontent.com/29465741/27224076-9702bb36-5293-11e7-89e1-de6c9e86ec05.png)  
+Avant de réaliser le montage, copiez chargez le programme suivant dans votre carte arduino :  
+```àrduino
+void setup() 
+{
+  pinMode(4, OUTPUT);   //configuration de la pin 4 en sortie
+}
 
+void loop() 
+{
+  digitalWrite(4, HIGH);  //allumer la led
+  delay(1000);            //attendre 1 seconde
+  digitalWrite(4, LOW);   //éteindre la led
+  delay(1000);            //attendre 1 seconde
+}
+```
 
-
-Nous allons ensuite reprendre le montage précédent et brancher l'alimentation de la led sur la pin *13* au lieu de la pin *5V*.  
+Nous allons ensuite reprendre le montage précédent et brancher l'alimentation de la led sur la pin *4* au lieu de la pin *5V*.  
 Une fois le montage réalisé, branchez votre carte pour l'alimenter.
 
-Votre led qui clignote? Félicitation!  
+**Schéma de câblage à venir**
+
+Votre led clignote? Félicitation!  
 Vous venez de franchir la frontière entre l'électronique et la programmation en controllant un montage à partir de votre carte.
 
-NB: Avez vous remarquez que la led de la carte arduino clignote en même temps que celle de votre montage? Pas de panique c'est normal!  
-La led de la carte arduino est montée en parallèle à la pin *13* sur votre carte. 
+Quelques explications ne seront pas de trop! L'instruction *digitalWrite(4, HIGH);* permet de générer une tension de 5V sur la pin *4*, c'est ce qu'on appel en programmation un **niveau logique haut**. A l'inverse, l'instruction *digitalWrite(4, LOW);* permet de générer une tension de 0V, c'est ce qu'on appel un **niveau logique bas**.  
+Vous l'aurez compris, celà permet d'alimenter ou non le montage et donc d'allumer ou non la led.
+
+Nous allons maintenant modifier le code afin qu'il soit plus *propre*.  
+- Déclarez une variable et nommez la *Led*.  
+- Lors de la déclaration, initialisez la variable avec le numéro de la pin sur laquel est branchée la led.  
+- Finalement remplacez dans le code les *4* par *led*. De cette manière, il ne vous reste plus qu'a changer la valeur de *Led* lors de la déclaration si vous branchez votre montage sur une autre pin.
+```arduino
+int Led=4;  //déclaration de la variable Led dont la valeur est 4
+
+void setup() 
+{
+  pinMode(Led, OUTPUT);   //configuration de la pin 4 en sortie
+}
+
+void loop() 
+{
+  digitalWrite(Led, HIGH);  //allumer la led
+  delay(1000);            //attendre 1 seconde
+  digitalWrite(Led, LOW);   //éteindre la led
+  delay(1000);            //attendre 1 seconde
+}
+```  
+
+NB: Si vous branchez votre montage sur la pin *13*, vous remarquez que la led de la carte arduino clignote en même temps que celle de votre montage. Celà est dut au fait que la led de la carte arduino est montée en parallèle à la pin *13* sur votre carte. 
+
+# 3. Faire clignoter deux leds :
+
+Pour faire clignoter deux leds, il vous suffit de réaliser un deuxième montage de led en série avec une résistance et de brancher son alimentation sur une autre pin. 
+
+**Schéma de cablage à venir**
+
+Pour le code, déclarez une deuxième variable dont la valeur est celle de la pin de la deuxième led. Une fois la variable déclarée, il ne vous reste plus qu'a éteindre la deuxième led lorsque la première est allumée et inversement.
+```arduino
+int Led_1=4;  //déclaration de la variable Led_1 dont la valeur est 4
+int Led_2=5;  //déclaration de la variable Led_2 dont la valeur est 5
+
+void setup() 
+{
+  pinMode(Led_1, OUTPUT);   //configuration de la pin 4 en sortie
+  pinMode(Led_2, OUTPUT);   //configuration de la pin 4 en sortie
+}
+
+void loop() 
+{
+  digitalWrite(Led_1, HIGH);  //allumer la première led
+  digitalWrite(Led_2, LOW);   //éteindre la deuxième led
+  delay(1000);                //attendre 1 seconde 
+  
+  digitalWrite(Led_1, Low);   //éteindre la première led
+  digitalWrite(Led_2, HIGH);  //allumer la deuxième led
+  delay(1000);                //attendre 1 seconde
+}
+```  
+
 
 
 
@@ -295,11 +365,16 @@ La led de la carte arduino est montée en parallèle à la pin *13* sur votre ca
 ---
 
 
+Félicitation, vous avez maintenant en moins tout les outils nécésaires pour réaliser vos premiers jeux de leds.
+Vous êtes à présent capable de:
+* cabler une led.
+* controler plusieurs leds. 
+
 
 ### Conseils et astuces :
 
-
-
+* **Triez vos composant par type et par valeur**, celà peut vous prendre du temps mais vous évitera plus tard de perdre du temps lors de vos prochains projets. 
+* écrivez les valeurs sur vos bandes de résistance 
 ---
 # Exercice complémentaire :
 ---
