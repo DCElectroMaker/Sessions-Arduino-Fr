@@ -353,13 +353,6 @@ void loop()
 }
 ```  
 
-
-
-
-**Cliquez ici pour ma solution**
-
-
-
 ---
 # Conclusion :
 ---
@@ -374,11 +367,18 @@ Vous êtes à présent capable de:
 ### Conseils et astuces :
 
 * **Triez vos composant par type et par valeur**, celà peut vous prendre du temps mais vous évitera plus tard de perdre du temps lors de vos prochains projets. 
-* écrivez les valeurs sur vos bandes de résistance 
+* écrivez les valeurs sur vos bandes de résistances.  
+* vérifiez vos montages avant de les alimenter.
+* vérifiez le sens de vos leds avant de vous dires qu'elles sont claquées.
+
 ---
 # Exercice complémentaire :
 ---
 
+Réalisez un chanillard à 8 leds. Aidez vous des boucles apprises lors de la session#0 pour écrir votre code.
+Libre à vous d'imaginer vos propre séquences.
+
+Example de chenillard: https://www.youtube.com/watch?v=nflcVYwpXik
 
 --- 
 Sources :  
@@ -386,6 +386,7 @@ https://www.youtube.com/channel/UCVqx3vXNghSqUcVg2nmegYA
 https://www.youtube.com/channel/UCNDybCEVgyROIXEIeWgp7hA  
 https://www.youtube.com/channel/UCKePSV3VZrLFDexdTNh5PTw  
 https://www.youtube.com/channel/UCeUpjZW7WywpFxASPRd6FDw  
+https://www.youtube.com/channel/UCgD_RoKhcgufgEsuMQxqKtA  
 Iconographie :  
 https://libraries.io/github/Bouni/Arduino-Pinout  
 http://boutique.semageek.com/fr/2-arduino-uno-dip-rev3-8058333490090.html  
