@@ -154,6 +154,8 @@ Pour obtenir le courant qui traverse la résistance, il suffit de transformer la
 **U=R.I -> I=U/R**  
 Si on reprend notre exemple on aura donc **I=9/100=0,09A** soit **90mA*
 
+**mettre des exo, mettre des schéma, mettre les unité et les noms des symboles**
+
 ## 3. Les montages séries :
 
 Faire un montage en série reviens à monter les composants l'un à la suite de l'autre comme dans la vidéo précédente.
