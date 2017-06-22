@@ -31,7 +31,7 @@
 ![arduino](https://user-images.githubusercontent.com/29465741/27254447-62f8ec7a-5388-11e7-8e5b-8612e45e7a85.png)  
 -Un cable USB type AB  
 ![usbab](https://user-images.githubusercontent.com/29465741/27254453-8fda0314-5388-11e7-8c57-2a60cd037466.png)  
--Quelques leds 5mm de diamètre 
+-Quelques leds 5mm de diamètre  
 ![led](https://user-images.githubusercontent.com/29465741/27261760-dcb38202-5449-11e7-8d24-9cc7d96db89c.png)  
 -Quelques résistances  
 ![resistances](https://user-images.githubusercontent.com/29465741/27261781-5069832c-544a-11e7-8496-076269d5d1c1.png)  
@@ -219,6 +219,9 @@ La disposition des connections internnes sont faites de façon à pouvoir alimen
 2. **Diamètre:** Pour une même couleurs, la tension de seuil et le courant maximal d'une led varie en fonction de son diamètre.  
 3. **Tension de seuil:** Même si une led est montée en passant, il faut une tension minimale aux borne de la led qui correspond à la tension de seuil autrement la led ne s'allumera pas. Une fois que la tension de seuil est atteinte, la tension aux bornes de la led sera égale à la tension de seuil. La tensiond'alimentation doit être supperieur à la tension de seuil car la réssistance en série va *pomper* une partie de la tension d'alimenttion.
 
+Le tableau suivant reprend les caractèristiques des leds 5mm de diamètre et donne la valeur de la résistance en série en fonction de la tension d'alimentation.  
+![tableau led](https://user-images.githubusercontent.com/29465741/27415218-21d7de50-5706-11e7-93f6-0e0ec51dfa68.png)
+
 #### À vous de jouer !
 
 * Pour chaque montage, expliquez pourquoi la led s'allume ou non. La tension de seuil de la led est de 2,1V.
@@ -371,6 +374,8 @@ Vous êtes à présent capable de:
 * vérifiez vos montages avant de les alimenter.
 * vérifiez le sens de vos leds avant de vous dires qu'elles sont claquées.
 
+Pour plus d'info sur les leds : https://www.sonelec-musique.com/electronique_realisations_alim_led.html
+
 ---
 # Exercice complémentaire :
 ---
@@ -397,4 +402,4 @@ https://zombiebothq.com/challenge-two-signal-box-v2/
 https://electronics.stackexchange.com/questions/211885/why-are-my-components-unconnected-in-the-middle-of-the-breadboard  
 http://www.pinsdaddy.com/led-symbol_%7CxMV5OGmMxn2yhHrJJ8lYkUdc54ipx5j%7CQ%7CZ7BxppZ4/  
 http://www.pcrc.org.uk/blog/2012/12/16/working_leds_part   
- 
+https://www.sonelec-musique.com/electronique_realisations_alim_led.html 
