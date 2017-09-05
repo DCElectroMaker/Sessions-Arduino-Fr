@@ -280,7 +280,7 @@ Vous venez de créer un petit montage qui vous permet de tester vos leds et ains
 # 2. Faire clignoter une led :
 
 Avant de réaliser le montage, copiez chargez le programme suivant dans votre carte arduino :  
-```àrduino
+```arduino
 void setup() 
 {
   pinMode(4, OUTPUT);   //configuration de la pin 4 en sortie
