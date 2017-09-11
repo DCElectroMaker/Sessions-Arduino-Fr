@@ -53,7 +53,9 @@ https://www.youtube.com/watch?v=9f9KYO8Hzzg
 
 Un bouton poussoir est un composant permettant de réaliser un contact électrique. Lorsque le bouton est appuyé, il crée un contact entre ses 2 bornes permettant ainsi le passage du courant; on parle alors de circuit fermé et de circuit ouvert lorsque le boutonn'est pas appuyé.
 
-Un autre symbole que celui utilisé dans la vidéo est le suivant:
+Autres symboles que celui utilisé dans la vidéo :
+
+![bpsymb](https://user-images.githubusercontent.com/29465741/30281691-608aae00-9713-11e7-822b-46e4aa79415f.png)
 
 ## 1.2 Comment câbler?
 
@@ -65,9 +67,13 @@ Pas de panique, tout s'explique !!!
 
 La présence de pins au lieu de 2 permet une meilleurs résistance mécanique lorsque ces composants sont soudés sur une carte électronique. Les pins sont connectées 2 par 2 à l'interieur du composant.
 
+![bp](https://user-images.githubusercontent.com/29465741/30281444-bae3993a-9712-11e7-938d-0286175f45ac.png)
+
 Pour détecter les paires de pins il vous suffit de faire un test de continuité avec un multimètre. Si vous ne savez pas comment vous servir d'un multimètre ou tout simplement si vous n'en posédez pas, La meilleur solution est d'utiliser 2 pins qui sont diamétralement opposées pour réaliser votre *pont*.
 
 Une fois les pins repérée, il vous suffit de mettre en série le bouton avec une résistance de 10 KΩ et de connecter le point millieu à une pin de la carte arduino. Lorsque le bouton est enffoncé, le montage envois un niveau haut, c'est à dire une tension de 5V vers la carte Arduino et un niveau bas, donc 0V lorsque le bouton est relaché.
+
+![bpcabl](https://user-images.githubusercontent.com/29465741/30282059-74a4e5b2-9714-11e7-92b0-63065c2cfd99.png)
 
 /!\ En inversant la position du bouton pousoir et de la résistance, on inverse le fonctionnement du montage: un niveau haut est généré lorsque le bouton est relaché et un niveau bas est généré lorsque le bouton est enfoncé. C'est ce qu'on appel travailler en **logique inverse**. Pour la suite des sessions, nous n'utiliserons pas ce type de montage!
 
@@ -311,7 +317,7 @@ Avant de câbler la led RGB il est important de repérer le type de led utilisé
 
 Une fois la led identifiée, vous pouvez calculer la résistance de série de chaque led mais une résistance 220 ohms par led fera l'affaire.
 
-
+![fibn3](https://user-images.githubusercontent.com/29465741/30280947-5b86567c-9711-11e7-8f23-55729035ef9f.png)
 
 
 ## 3.3 Comment programmer?
@@ -334,7 +340,7 @@ Controle PWM pour cathode commune:
  analogWrite(LedB,0);     //led bleu à 0%
  ```
  
- /!\ Une Led RGB à anode commune fonctionne en inverse ! 
+ /!\ Une Led RGB à anode commune fonctionne en inverse elle sera éteinte pour digitalWrite(LedR,HIGH) et analogWrite(LedR,254).
 
 ## 3.4 Mise en pratique:
 
@@ -404,3 +410,12 @@ void loop()
   //à remplir
 }
 ```
+
+Sources:
+
+Iconographie:
+http://theawesomedaily.com/43-meme-faces-rage-comics-to-finally-explain-you-what-they-all-mean/
+http://www.robotshop.com/eu/fr/mini-bouton-poussoir-5pk.html
+https://sti2d.ecolelamache.org/norme_elec.png
+https://arlontronique.wordpress.com/lecture-dun-encodeur-rotatif-attiny2313-et-assembleur/
+https://electronics.stackexchange.com/questions/241446/common-cathode-vs-common-anode-rgb-led
