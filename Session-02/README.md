@@ -306,7 +306,9 @@ off   on    off   vert
 off   off   off   bleu  
 on    on    off   jaune  
 on    off   on    mangate  
-off   on    on    turquoise  
+off   on    on    turquoise    
+
+![additivecolor svg](https://user-images.githubusercontent.com/29465741/30285250-cdefa4d2-971d-11e7-8a53-a9fe47a4f94f.png)
 
 En jouant sur l'intensitée lumineuse de chaque led, on peut alors obtenir une palette de couleur infinie.
 
