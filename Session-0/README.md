@@ -1,3 +1,5 @@
+![arduino_logo](https://user-images.githubusercontent.com/29465741/30284811-4a6a0590-971c-11e7-8e46-828f4ff083ed.png)
+
 # Session #0: 
 # Premiers pas et logique de programmation.
 
