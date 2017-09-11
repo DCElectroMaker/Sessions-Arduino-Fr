@@ -411,9 +411,38 @@ void loop()
 }
 ```
 
-Sources:
+---
+# Conclusion :
+---
 
-Iconographie:
+
+Félicitation, vous avez maintenant vous servir d'un magnifique bouton pour vos chef d'oeuvre d'ingenuosité!
+Vous êtes à présent capable de:
+* cabler et d'utiliser un bouton pousoir.
+* controler la luminausité d'une led.
+* controler une led RGB. 
+
+### Conseils et astuces :
+
+* regardez vos leds par le dessus, c'est le point de vue idéal pour un maximum de luminosité. 
+* travaillez dans un environnement sombre pour bien visualiser les variations de luminosité.
+* vérifiez le sens de vos leds avant de vous dires qu'elles sont claquées.
+
+---
+# Exercices complémentaire :
+---
+
+- Réalisez un chanillard à 8 leds où l'allumage et l'extiction des leds se fait de manière graduelle.  
+- Ajoutez un bouton pour démarrer votre chenillard 
+- Réalisez un dés avec 6 leds et un bouton. Appuyez sur le bouton pour commencer à allumer les leds comme un chenillard. Lorsque vous relachez le bouton, les leds devront se figer. Pour ajouter un facteur de hasard, utilisez un délais suffisament petit pour que le résultat du dès ne soit pas prévisible.
+
+---
+
+Sources:  
+https://www.youtube.com/watch?v=9f9KYO8Hzzg  
+https://www.youtube.com/watch?v=CSReyYwbGRY  
+
+Iconographie:  
 http://theawesomedaily.com/43-meme-faces-rage-comics-to-finally-explain-you-what-they-all-mean/
 http://www.robotshop.com/eu/fr/mini-bouton-poussoir-5pk.html
 https://sti2d.ecolelamache.org/norme_elec.png
